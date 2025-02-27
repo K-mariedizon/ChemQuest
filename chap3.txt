@@ -1,0 +1,14 @@
+Measures of Center
+One of the primary ways to summarize data is by calculating a measure of center, which provides a central or typical value around which the data is distributed. The most common measure of center is the mean:
+
+[picture]
+
+
+Measures of Shape
+The shape of the data distribution refers to the pattern in which data values are spread across the range of measurements. This can be assessed using graphical representations such as histograms, boxplots, or by calculating:
+
+- Skewness: Measures the asymmetry of the data distribution.
+- Kurtosis: Measures the "tailedness" or how concentrated the data points are in the tails of the distribution.
+
+Graphical Representations
+Graphical representations are key tools for visualizing the patterns in laboratory data. These can help identify trends, outliers, and the overall shape of the data distribution, which further supports the decision-making process in the clinical setting.

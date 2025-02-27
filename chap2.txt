@@ -1,0 +1,35 @@
+Safety Responsibility: Both employers and employees share safety responsibility. Employers set safety policies, provide training, and ensure equipment and facilities are safe. Employees must follow safety practices, maintain a positive attitude, and ensure their own and coworkers' safety.
+
+Employer's Responsibilities:
+
+- Establish safety policies and procedures
+- Provide training, personal protective equipment (PPE), and medical surveillance
+- Ensure safe and suitable facilities and equipment
+
+Employee's Responsibilities:
+- Follow established safety practices
+- Participate in safety training and maintain a safe attitude
+
+Chemical Hygiene Plan: Laboratories must have a plan detailing controls for chemical hazards, including engineering controls, PPE, and safe work practices.
+Other Regulations and Guidelines: Compliance with federal regulations like the Clean Water Act and RCRA is required. Laboratories must also follow local and state safety laws. Accrediting bodies like TJC and CAP provide safety guidelines for lab operations and accreditation.
+Enhanced Security Measures: New laws address the security of hazardous substances, especially those with potential misuse. Laboratories must be aware of these measures, particularly for radiological and biological agents.
+
+Proper signage is essential to alert laboratory personnel to potential hazards and specific emergency risks, 
+Chemical Manufacturers' Labels: Manufacturers provide detailed labeling on laboratory chemicals, including:
+
+-Hazard statements
+-Precautionary measures
+-Hazard class (e.g., flammable, corrosive)
+-First aid instructions for exposure (internal/external)
+-Storage and safety codes
+-Required personal protective equipment (PPE)
+
+These labels also include specifications for the chemical constituents and other relevant product information.
+Globally Harmonized System (GHS): Over recent decades, efforts have been made to standardize hazard terminology and classification under the Globally Harmonized System of Classification and Labeling of Hazardous Chemicals (GHS). This system uses universally recognized definitions and symbols to communicate specific hazards in a concise and clear manner on labels. While GHS is not universally codified into law, many clinical laboratories have adopted its practices.
+NFPA Hazard Identification: The NFPA diamond is a key tool in identifying hazards. It consists of four quadrants:
+
+-Blue for health hazards
+-Red for flammability hazards
+-Yellow for reactivity/stability hazards
+-White for special information (e.g., radiation, acid)
+Each quadrant includes a severity rating, ranging from 0 (least severe) to 4 (most severe), enabling emergency personnel to quickly assess risks.
