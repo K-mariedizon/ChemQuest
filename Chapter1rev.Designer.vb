@@ -36,13 +36,16 @@ Partial Class Chapter1rev
         btnClear = New Button()
         TextBox1 = New TextBox()
         cmbChapters = New ComboBox()
-        txtNotes = New TextBox()
         picImage = New PictureBox()
         cmbSubtopics = New ComboBox()
         btnGame = New Button()
         btnExit = New Button()
         btnBack = New Button()
         btnLogo = New Button()
+        TextBox2 = New TextBox()
+        btnReviewer = New Button()
+        TextBox3 = New TextBox()
+        txtNotes = New RichTextBox()
         CType(picImage, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
@@ -51,7 +54,7 @@ Partial Class Chapter1rev
         cmbFrom.BackColor = Color.White
         cmbFrom.FormattingEnabled = True
         cmbFrom.Items.AddRange(New Object() {"Meters", "Kilometers", "Grams", "Kilograms", "Celsius", "Fahrenheit"})
-        cmbFrom.Location = New Point(49, 309)
+        cmbFrom.Location = New Point(46, 363)
         cmbFrom.Name = "cmbFrom"
         cmbFrom.Size = New Size(209, 28)
         cmbFrom.TabIndex = 35
@@ -61,7 +64,7 @@ Partial Class Chapter1rev
         cmbTo.BackColor = Color.White
         cmbTo.FormattingEnabled = True
         cmbTo.Items.AddRange(New Object() {"Meters", "Kilometers", "Grams", "Kilograms", "Celsius", "Fahrenheit"})
-        cmbTo.Location = New Point(49, 375)
+        cmbTo.Location = New Point(46, 429)
         cmbTo.Name = "cmbTo"
         cmbTo.Size = New Size(209, 28)
         cmbTo.TabIndex = 36
@@ -69,14 +72,14 @@ Partial Class Chapter1rev
         ' txtInput
         ' 
         txtInput.BackColor = Color.White
-        txtInput.Location = New Point(49, 452)
+        txtInput.Location = New Point(46, 506)
         txtInput.Name = "txtInput"
         txtInput.Size = New Size(176, 27)
         txtInput.TabIndex = 37
         ' 
         ' txtResult
         ' 
-        txtResult.Location = New Point(49, 514)
+        txtResult.Location = New Point(46, 568)
         txtResult.Name = "txtResult"
         txtResult.ReadOnly = True
         txtResult.Size = New Size(176, 27)
@@ -85,12 +88,12 @@ Partial Class Chapter1rev
         ' Label1
         ' 
         Label1.AutoSize = True
-        Label1.BackColor = Color.FromArgb(CByte(195), CByte(235), CByte(222))
-        Label1.Font = New Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label1.BackColor = Color.FromArgb(CByte(255), CByte(248), CByte(233))
+        Label1.Font = New Font("Cooper Black", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label1.ForeColor = Color.FromArgb(CByte(64), CByte(0), CByte(0))
-        Label1.Location = New Point(66, 214)
+        Label1.Location = New Point(69, 273)
         Label1.Name = "Label1"
-        Label1.Size = New Size(174, 56)
+        Label1.Size = New Size(186, 46)
         Label1.TabIndex = 39
         Label1.Text = "Units of Measure " & vbCrLf & "Basic Calculator"
         Label1.TextAlign = ContentAlignment.MiddleCenter
@@ -98,8 +101,8 @@ Partial Class Chapter1rev
         ' Label2
         ' 
         Label2.AutoSize = True
-        Label2.BackColor = Color.FromArgb(CByte(195), CByte(235), CByte(222))
-        Label2.Location = New Point(49, 286)
+        Label2.BackColor = Color.FromArgb(CByte(255), CByte(248), CByte(233))
+        Label2.Location = New Point(46, 340)
         Label2.Name = "Label2"
         Label2.Size = New Size(46, 20)
         Label2.TabIndex = 40
@@ -108,8 +111,8 @@ Partial Class Chapter1rev
         ' Label3
         ' 
         Label3.AutoSize = True
-        Label3.BackColor = Color.FromArgb(CByte(195), CByte(235), CByte(222))
-        Label3.Location = New Point(49, 352)
+        Label3.BackColor = Color.FromArgb(CByte(255), CByte(248), CByte(233))
+        Label3.Location = New Point(46, 406)
         Label3.Name = "Label3"
         Label3.Size = New Size(28, 20)
         Label3.TabIndex = 41
@@ -118,8 +121,8 @@ Partial Class Chapter1rev
         ' Label4
         ' 
         Label4.AutoSize = True
-        Label4.BackColor = Color.FromArgb(CByte(195), CByte(235), CByte(222))
-        Label4.Location = New Point(49, 429)
+        Label4.BackColor = Color.FromArgb(CByte(255), CByte(248), CByte(233))
+        Label4.Location = New Point(46, 483)
         Label4.Name = "Label4"
         Label4.Size = New Size(46, 20)
         Label4.TabIndex = 42
@@ -128,8 +131,8 @@ Partial Class Chapter1rev
         ' Label5
         ' 
         Label5.AutoSize = True
-        Label5.BackColor = Color.FromArgb(CByte(195), CByte(235), CByte(222))
-        Label5.Location = New Point(49, 491)
+        Label5.BackColor = Color.FromArgb(CByte(255), CByte(248), CByte(233))
+        Label5.Location = New Point(46, 545)
         Label5.Name = "Label5"
         Label5.Size = New Size(52, 20)
         Label5.TabIndex = 43
@@ -137,9 +140,9 @@ Partial Class Chapter1rev
         ' 
         ' btnConvert
         ' 
-        btnConvert.BackColor = Color.FromArgb(CByte(128), CByte(255), CByte(128))
+        btnConvert.BackColor = Color.Tan
         btnConvert.FlatStyle = FlatStyle.Popup
-        btnConvert.Location = New Point(49, 570)
+        btnConvert.Location = New Point(46, 624)
         btnConvert.Name = "btnConvert"
         btnConvert.Size = New Size(83, 29)
         btnConvert.TabIndex = 44
@@ -148,9 +151,9 @@ Partial Class Chapter1rev
         ' 
         ' btnClear
         ' 
-        btnClear.BackColor = Color.FromArgb(CByte(128), CByte(255), CByte(128))
+        btnClear.BackColor = Color.Tan
         btnClear.FlatStyle = FlatStyle.Popup
-        btnClear.Location = New Point(175, 570)
+        btnClear.Location = New Point(172, 624)
         btnClear.Name = "btnClear"
         btnClear.Size = New Size(83, 29)
         btnClear.TabIndex = 45
@@ -159,15 +162,14 @@ Partial Class Chapter1rev
         ' 
         ' TextBox1
         ' 
-        TextBox1.BackColor = Color.FromArgb(CByte(195), CByte(235), CByte(222))
-        TextBox1.BorderStyle = BorderStyle.FixedSingle
+        TextBox1.BackColor = Color.FromArgb(CByte(255), CByte(248), CByte(233))
         TextBox1.Enabled = False
         TextBox1.ForeColor = Color.FromArgb(CByte(64), CByte(0), CByte(0))
-        TextBox1.Location = New Point(12, 198)
+        TextBox1.Location = New Point(28, 263)
         TextBox1.Multiline = True
         TextBox1.Name = "TextBox1"
         TextBox1.ReadOnly = True
-        TextBox1.Size = New Size(283, 425)
+        TextBox1.Size = New Size(247, 414)
         TextBox1.TabIndex = 46
         ' 
         ' cmbChapters
@@ -182,20 +184,9 @@ Partial Class Chapter1rev
         cmbChapters.Size = New Size(165, 36)
         cmbChapters.TabIndex = 47
         ' 
-        ' txtNotes
-        ' 
-        txtNotes.BackColor = Color.FromArgb(CByte(195), CByte(235), CByte(222))
-        txtNotes.BorderStyle = BorderStyle.None
-        txtNotes.Location = New Point(354, 127)
-        txtNotes.Multiline = True
-        txtNotes.Name = "txtNotes"
-        txtNotes.ReadOnly = True
-        txtNotes.Size = New Size(316, 45)
-        txtNotes.TabIndex = 50
-        ' 
         ' picImage
         ' 
-        picImage.Location = New Point(800, 127)
+        picImage.Location = New Point(219, 174)
         picImage.Name = "picImage"
         picImage.Size = New Size(125, 45)
         picImage.TabIndex = 51
@@ -218,7 +209,7 @@ Partial Class Chapter1rev
         btnGame.BackgroundImage = CType(resources.GetObject("btnGame.BackgroundImage"), Image)
         btnGame.FlatStyle = FlatStyle.Flat
         btnGame.ForeColor = Color.FromArgb(CByte(83), CByte(67), CByte(55))
-        btnGame.Location = New Point(0, 106)
+        btnGame.Location = New Point(1, 150)
         btnGame.Name = "btnGame"
         btnGame.Size = New Size(178, 25)
         btnGame.TabIndex = 54
@@ -229,9 +220,9 @@ Partial Class Chapter1rev
         btnExit.BackgroundImage = CType(resources.GetObject("btnExit.BackgroundImage"), Image)
         btnExit.FlatStyle = FlatStyle.Flat
         btnExit.ForeColor = Color.FromArgb(CByte(83), CByte(67), CByte(55))
-        btnExit.Location = New Point(0, 146)
+        btnExit.Location = New Point(1, 190)
         btnExit.Name = "btnExit"
-        btnExit.Size = New Size(192, 26)
+        btnExit.Size = New Size(192, 29)
         btnExit.TabIndex = 55
         btnExit.UseVisualStyleBackColor = True
         ' 
@@ -258,20 +249,65 @@ Partial Class Chapter1rev
         btnLogo.TabIndex = 57
         btnLogo.UseVisualStyleBackColor = True
         ' 
+        ' TextBox2
+        ' 
+        TextBox2.BackColor = Color.Tan
+        TextBox2.Enabled = False
+        TextBox2.ForeColor = Color.FromArgb(CByte(64), CByte(0), CByte(0))
+        TextBox2.Location = New Point(9, 250)
+        TextBox2.Multiline = True
+        TextBox2.Name = "TextBox2"
+        TextBox2.ReadOnly = True
+        TextBox2.Size = New Size(281, 445)
+        TextBox2.TabIndex = 58
+        ' 
+        ' btnReviewer
+        ' 
+        btnReviewer.BackgroundImage = CType(resources.GetObject("btnReviewer.BackgroundImage"), Image)
+        btnReviewer.FlatStyle = FlatStyle.Flat
+        btnReviewer.ForeColor = Color.FromArgb(CByte(83), CByte(67), CByte(55))
+        btnReviewer.Location = New Point(1, 105)
+        btnReviewer.Name = "btnReviewer"
+        btnReviewer.Size = New Size(192, 28)
+        btnReviewer.TabIndex = 61
+        btnReviewer.UseVisualStyleBackColor = True
+        ' 
+        ' TextBox3
+        ' 
+        TextBox3.BackColor = Color.FromArgb(CByte(255), CByte(248), CByte(233))
+        TextBox3.BorderStyle = BorderStyle.None
+        TextBox3.Location = New Point(185, 105)
+        TextBox3.Multiline = True
+        TextBox3.Name = "TextBox3"
+        TextBox3.ReadOnly = True
+        TextBox3.Size = New Size(990, 28)
+        TextBox3.TabIndex = 62
+        ' 
+        ' txtNotes
+        ' 
+        txtNotes.BackColor = Color.FromArgb(CByte(255), CByte(248), CByte(233))
+        txtNotes.BorderStyle = BorderStyle.None
+        txtNotes.Location = New Point(372, 106)
+        txtNotes.Name = "txtNotes"
+        txtNotes.ReadOnly = True
+        txtNotes.Size = New Size(1026, 671)
+        txtNotes.TabIndex = 63
+        txtNotes.Text = ""
+        ' 
         ' Chapter1rev
         ' 
-        AutoScaleDimensions = New SizeF(8F, 20F)
-        AutoScaleMode = AutoScaleMode.Font
+        AutoScaleMode = AutoScaleMode.None
         BackColor = Color.FromArgb(CByte(195), CByte(235), CByte(222))
         BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), Image)
         ClientSize = New Size(1440, 806)
+        Controls.Add(txtNotes)
+        Controls.Add(btnReviewer)
         Controls.Add(btnLogo)
         Controls.Add(btnBack)
         Controls.Add(btnExit)
         Controls.Add(btnGame)
         Controls.Add(cmbSubtopics)
         Controls.Add(picImage)
-        Controls.Add(txtNotes)
         Controls.Add(cmbChapters)
         Controls.Add(btnClear)
         Controls.Add(btnConvert)
@@ -285,6 +321,8 @@ Partial Class Chapter1rev
         Controls.Add(cmbTo)
         Controls.Add(cmbFrom)
         Controls.Add(TextBox1)
+        Controls.Add(TextBox2)
+        Controls.Add(TextBox3)
         MaximizeBox = False
         MinimizeBox = False
         Name = "Chapter1rev"
@@ -307,11 +345,14 @@ Partial Class Chapter1rev
     Friend WithEvents btnClear As Button
     Friend WithEvents TextBox1 As TextBox
     Friend WithEvents cmbChapters As ComboBox
-    Friend WithEvents txtNotes As TextBox
     Friend WithEvents picImage As PictureBox
     Friend WithEvents cmbSubtopics As ComboBox
     Friend WithEvents btnGame As Button
     Friend WithEvents btnExit As Button
     Friend WithEvents btnBack As Button
     Friend WithEvents btnLogo As Button
+    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents btnReviewer As Button
+    Friend WithEvents TextBox3 As TextBox
+    Friend WithEvents txtNotes As RichTextBox
 End Class

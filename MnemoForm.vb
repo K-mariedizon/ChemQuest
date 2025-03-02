@@ -6,7 +6,7 @@
     End Sub
 
     Private Sub btnLogo_Click(sender As Object, e As EventArgs) Handles btnLogo.Click
-        Dim mainmenuForm As New Form1
+        Dim mainmenuForm As New btnPass
         mainmenuForm.Show()
         Hide()
     End Sub
@@ -35,7 +35,7 @@
     'End Sub
 
     Private Sub btnBack_Click(sender As Object, e As EventArgs) Handles btnBack.Click
-        Dim mainmenuForm As New Form1
+        Dim mainmenuForm As New btnPass
         mainmenuForm.Show()
         Hide()
     End Sub

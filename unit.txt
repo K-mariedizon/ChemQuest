@@ -1,0 +1,61 @@
+  Units of Measure
+  Systeme Internationale (SI)
+	- Consists of seven independent base units, and each unit is represented by a symbol
+	- Used because compounds react on a molar basis, and expression of amounts of substances in such terms allows for a better understanding of the relative proportion of compounds
+
+  7 Base SI units:
+	a. Meter (m)- length
+	b. Kilogram (kg)- mass
+	c. Second (s)- time
+	d. Mole (mol)- quantity of substance
+	e. Ampere (A)- electric current
+	f. Kelvin (K)- thermodynamic temperature
+	g. Candela (cd)- luminous intensity
+
+  Notes:
+	- It has been recommended that analytes be reported using moles of solute/ volume of solution (mmol/L)
+	- Enzyme units are given as the International Unit per liter (U/L) although katal unit has been adopted previously as the SI Unit, its use is limited
+	- pH scale is retained for measurement of hydrogen ion concentrations
+	- Liter is used as the reference volume
+	- SI unit is used because compounds react on a molar basis, and expression of amounts of substances in such terms allows for a better understanding of the relative proportion of compounds
+
+
+REAGENT PREPARATION AND LABORATORY SUPPLIES
+	ANALYTIC CHEMICALS
+	ANALYTIC REAGENT
+	- Specifications established by the American Chemical Society
+	- Labels on reagent state the actual impurities for each chemical lot OR list the maximum allowable impurities
+	- Suitable for use in most analytic laboratory procedures
+
+ULTRAPURE
+	- Additional purification steps
+	- For use in specific procedures such as chromatography, atomic absorption, immunoassays, molecular diagnostics, standardization or other techniques that require extremely pure chemicals
+
+CHEMICALLY PURE OR PURE GRADE
+	- Impurity limitations are not stated
+	- Preparation of these chemicals is not uniform
+	- Melting point analysis is often used to ascertain the acceptability purity range
+	- Not recommended for use unless further purification or a reagent blank is included
+
+UNITED STATES PHARMACOPEIA/ NATIONAL FORMULARY
+	- Used to manufacture drugs
+	- Limitations are based on the criterion of not being injurious to individuals
+	- Purity standards are not based on laboratory needs
+
+TECHNICAL/ COMMERCIAL GRADE
+	- Used primarily in manufacturing and should never be used in the clinical laboratory
+
+
+REFERENCE MATERIAL
+	- primary Standard: highly purified chemical that can be measured directly to 
+	- produce a substance of exact known concentration and purity
+	- Secondary Standard: substance of lower purity with concentration determined by comparison with a primary standard
+
+WATER SPECIFICATIONS
+	- Tap water is unsuitable for lab procedures
+	- Laboratories usually require REAGENT GRADE WATER
+
+METHODS OF PURIFICATION
+- DISTILLED WATER- purified only by distillation
+- DEIONIZED WATER- purified by ion exchange
+- RO WATER- reverse osmosis which pumps water across a semipermeable 

@@ -4,7 +4,7 @@ Public Class Game2score
     ' Connection string to the Access database
     Public connectionString As String = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Kiana\Documents\AlgoMasters_Project\Database2.accdb"
     Private Sub btnLogo_Click(sender As Object, e As EventArgs) Handles btnLogo.Click
-        Dim mainmenuForm As New Form1()
+        Dim mainmenuForm As New btnPass()
         mainmenuForm.Show()
         Me.Hide()
     End Sub

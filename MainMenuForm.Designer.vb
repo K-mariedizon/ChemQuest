@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
-Partial Class Form1
+Partial Class btnPass
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -23,7 +23,7 @@ Partial Class Form1
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         components = New ComponentModel.Container()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(btnPass))
         btnReviewer = New Button()
         btnMiniGames = New Button()
         btnNotes = New Button()
@@ -32,6 +32,7 @@ Partial Class Form1
         btnAbout = New Button()
         ToolTip1 = New ToolTip(components)
         btnLogo = New Button()
+        Button1 = New Button()
         SuspendLayout()
         ' 
         ' btnReviewer
@@ -115,12 +116,25 @@ Partial Class Form1
         btnLogo.TabIndex = 6
         btnLogo.UseVisualStyleBackColor = True
         ' 
-        ' Form1
+        ' Button1
         ' 
-        AutoScaleDimensions = New SizeF(8F, 20F)
-        AutoScaleMode = AutoScaleMode.Font
+        Button1.BackColor = Color.SandyBrown
+        Button1.BackgroundImage = CType(resources.GetObject("Button1.BackgroundImage"), Image)
+        Button1.FlatStyle = FlatStyle.Flat
+        Button1.Font = New Font("Showcard Gothic", 10.2F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Button1.ForeColor = Color.DarkGoldenrod
+        Button1.Location = New Point(1363, 31)
+        Button1.Name = "Button1"
+        Button1.Size = New Size(40, 38)
+        Button1.TabIndex = 7
+        Button1.UseVisualStyleBackColor = False
+        ' 
+        ' btnPass
+        ' 
+        AutoScaleMode = AutoScaleMode.None
         BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), Image)
         ClientSize = New Size(1430, 811)
+        Controls.Add(Button1)
         Controls.Add(btnLogo)
         Controls.Add(btnExit)
         Controls.Add(btnAbout)
@@ -131,7 +145,7 @@ Partial Class Form1
         ForeColor = Color.PeachPuff
         MaximizeBox = False
         MinimizeBox = False
-        Name = "Form1"
+        Name = "btnPass"
         StartPosition = FormStartPosition.CenterScreen
         Text = "Form1"
         ResumeLayout(False)
@@ -145,5 +159,6 @@ Partial Class Form1
     Friend WithEvents btnAbout As Button
     Friend WithEvents ToolTip1 As ToolTip
     Friend WithEvents btnLogo As Button
+    Friend WithEvents Button1 As Button
 
 End Class

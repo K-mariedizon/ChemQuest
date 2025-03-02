@@ -27,8 +27,6 @@ Partial Class Mnemo1
         btnLogo = New Button()
         PictureBox2 = New PictureBox()
         PictureBox1 = New PictureBox()
-        btnB1 = New Button()
-        btnB2 = New Button()
         btnC1 = New Button()
         btnC2 = New Button()
         btnC3 = New Button()
@@ -80,31 +78,9 @@ Partial Class Mnemo1
         PictureBox1.TabIndex = 28
         PictureBox1.TabStop = False
         ' 
-        ' btnB1
-        ' 
-        btnB1.BackgroundImage = CType(resources.GetObject("btnB1.BackgroundImage"), Image)
-        btnB1.FlatStyle = FlatStyle.Flat
-        btnB1.ForeColor = Color.FromArgb(CByte(83), CByte(67), CByte(55))
-        btnB1.Location = New Point(1225, 0)
-        btnB1.Name = "btnB1"
-        btnB1.Size = New Size(39, 40)
-        btnB1.TabIndex = 31
-        btnB1.UseVisualStyleBackColor = True
-        ' 
-        ' btnB2
-        ' 
-        btnB2.BackgroundImage = CType(resources.GetObject("btnB2.BackgroundImage"), Image)
-        btnB2.FlatStyle = FlatStyle.Flat
-        btnB2.ForeColor = Color.FromArgb(CByte(83), CByte(67), CByte(55))
-        btnB2.Location = New Point(1270, -1)
-        btnB2.Name = "btnB2"
-        btnB2.Size = New Size(31, 44)
-        btnB2.TabIndex = 32
-        btnB2.UseVisualStyleBackColor = True
-        ' 
         ' btnC1
         ' 
-        btnC1.BackColor = Color.LightGreen
+        btnC1.BackColor = Color.Tan
         btnC1.FlatStyle = FlatStyle.Flat
         btnC1.Font = New Font("Segoe UI Semibold", 12F, FontStyle.Bold)
         btnC1.ForeColor = SystemColors.ActiveCaptionText
@@ -117,7 +93,7 @@ Partial Class Mnemo1
         ' 
         ' btnC2
         ' 
-        btnC2.BackColor = Color.LightGreen
+        btnC2.BackColor = Color.Tan
         btnC2.FlatStyle = FlatStyle.Flat
         btnC2.Font = New Font("Segoe UI Semibold", 12F, FontStyle.Bold)
         btnC2.ForeColor = SystemColors.ActiveCaptionText
@@ -130,7 +106,7 @@ Partial Class Mnemo1
         ' 
         ' btnC3
         ' 
-        btnC3.BackColor = Color.LightGreen
+        btnC3.BackColor = Color.Tan
         btnC3.FlatStyle = FlatStyle.Flat
         btnC3.Font = New Font("Segoe UI Semibold", 12F, FontStyle.Bold)
         btnC3.ForeColor = SystemColors.ActiveCaptionText
@@ -143,23 +119,22 @@ Partial Class Mnemo1
         ' 
         ' PanelButtons
         ' 
+        PanelButtons.BackColor = Color.FromArgb(CByte(255), CByte(248), CByte(233))
+        PanelButtons.BorderStyle = BorderStyle.FixedSingle
         PanelButtons.Controls.Add(btnC1)
         PanelButtons.Controls.Add(btnC3)
         PanelButtons.Controls.Add(btnC2)
-        PanelButtons.Location = New Point(1141, 66)
+        PanelButtons.Location = New Point(1161, 59)
         PanelButtons.Name = "PanelButtons"
-        PanelButtons.Size = New Size(245, 231)
+        PanelButtons.Size = New Size(240, 237)
         PanelButtons.TabIndex = 36
         ' 
         ' Mnemo1
         ' 
-        AutoScaleDimensions = New SizeF(8F, 20F)
-        AutoScaleMode = AutoScaleMode.Font
+        AutoScaleMode = AutoScaleMode.None
         BackColor = Color.Honeydew
         ClientSize = New Size(1413, 1014)
         Controls.Add(PanelButtons)
-        Controls.Add(btnB2)
-        Controls.Add(btnB1)
         Controls.Add(Button1)
         Controls.Add(btnLogo)
         Controls.Add(PictureBox2)
@@ -177,8 +152,6 @@ Partial Class Mnemo1
     Friend WithEvents btnLogo As Button
     Friend WithEvents PictureBox2 As PictureBox
     Friend WithEvents PictureBox1 As PictureBox
-    Friend WithEvents btnB1 As Button
-    Friend WithEvents btnB2 As Button
     Friend WithEvents btnC1 As Button
     Friend WithEvents btnC2 As Button
     Friend WithEvents btnC3 As Button

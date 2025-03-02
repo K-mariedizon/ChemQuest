@@ -88,22 +88,22 @@ Public Class Mnemo1
     End Sub
 
     Private Sub btnLogo_Click(sender As Object, e As EventArgs) Handles btnLogo.Click
-        Dim mainmenuForm As New Form1
+        Dim mainmenuForm As New btnPass
         mainmenuForm.Show()
         Hide()
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        Dim revForm As New Chapter2
+        Dim revForm As New MnemoForm
         revForm.Show()
         Hide()
     End Sub
 
-    Private Sub btnB1_Click(sender As Object, e As EventArgs) Handles btnB1.Click
-        Dim m As New Chapter3rev
-        m.Show()
-        Me.Hide()
-    End Sub
+    'Private Sub btnB1_Click(sender As Object, e As EventArgs) Handles btnB1.Click
+    '    Dim m As New Chapter3rev
+    '    m.Show()
+    '    Me.Hide()
+    'End Sub
 
 
 End Class

@@ -151,8 +151,7 @@ Partial Class MiniGamesForm
         ' 
         ' MiniGamesForm
         ' 
-        AutoScaleDimensions = New SizeF(8F, 20F)
-        AutoScaleMode = AutoScaleMode.Font
+        AutoScaleMode = AutoScaleMode.None
         BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), Image)
         ClientSize = New Size(1440, 811)
         Controls.Add(btnnote3)

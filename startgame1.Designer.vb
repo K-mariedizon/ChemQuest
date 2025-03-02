@@ -144,8 +144,7 @@ Partial Class startgame1
         ' 
         ' startgame1
         ' 
-        AutoScaleDimensions = New SizeF(8F, 20F)
-        AutoScaleMode = AutoScaleMode.Font
+        AutoScaleMode = AutoScaleMode.None
         BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), Image)
         ClientSize = New Size(1435, 807)
         Controls.Add(lblTimer)

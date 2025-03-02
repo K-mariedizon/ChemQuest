@@ -1,4 +1,4 @@
-﻿Public Class Form1
+﻿Public Class btnPass
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Dim ToolTip As New ToolTip()
 
@@ -46,8 +46,13 @@
     End Sub
 
     Private Sub btnLogo_Click(sender As Object, e As EventArgs) Handles btnLogo.Click
-        Dim mainmenuForm As New Form1()
+        Dim mainmenuForm As New btnPass()
         mainmenuForm.Show()
         Me.Hide()
+    End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        Dim ProfileForm As New Profile()
+        ProfileForm.Show()
     End Sub
 End Class

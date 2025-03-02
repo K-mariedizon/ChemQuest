@@ -2,7 +2,7 @@
 
 Public Class dashboard
     Private Sub dashboard_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Me.Text = "Welcome" & Form1.Name
+        'Me.Text = "Welcome" & Form1.Name
 
         If Login.level = 1 Then
             btnA.Enabled = False
@@ -18,7 +18,7 @@ Public Class dashboard
 
     Private Sub btnS_Click(sender As Object, e As EventArgs) Handles btnS.Click
         If Login.level = 1 Then
-            Dim mainmenuForm As New Form1
+            Dim mainmenuForm As New btnPass
             mainmenuForm.Show()
             Me.Hide()
         ElseIf Login.level = 2 Then

@@ -1,12 +1,15 @@
 ﻿Imports System.Data.OleDb
+Imports System.Runtime.InteropServices
 
 Public Class Chapter1rev
     ' Connection string to the Access database
+    'Dim txtNotes As New RichTextBox()
+
     Private connectionString As String = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Kiana\Documents\AlgoMasters_Project\Database2.accdb"
     Private connection As OleDbConnection
 
     Private Sub btnLogo_Click_1(sender As Object, e As EventArgs) Handles btnLogo.Click
-        Dim mainmenuForm As New Form1
+        Dim mainmenuForm As New btnPass
         mainmenuForm.Show()
         Hide()
     End Sub
@@ -19,6 +22,7 @@ Public Class Chapter1rev
 
 
     Private Sub Chapter1rev_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        txtNotes.Focus()
         connection = New OleDbConnection(connectionString)
         LoadChapters()
     End Sub
@@ -152,15 +156,16 @@ Public Class Chapter1rev
         End Try
     End Sub
 
-    Public Function CalculateTextBoxHeight(text As String, font As Font, maxWidth As Integer) As Integer
-        Dim textSize As SizeF
-        Using g As Graphics = Graphics.FromImage(New Bitmap(1, 1))
-            textSize = g.MeasureString(text, font, maxWidth)
-        End Using
-        Return CInt(Math.Ceiling(textSize.Height)) + 10
-    End Function
+    'Public Function CalculateTextBoxHeight(text As String, font As Font, maxWidth As Integer) As Integer
+    '    Dim textSize As SizeF
+    '    Using g As Graphics = Graphics.FromImage(New Bitmap(1, 1))
+    '        textSize = g.MeasureString(text, font, maxWidth)
+    '    End Using
+    '    Return CInt(Math.Ceiling(textSize.Height)) + 10
+    'End Function
 
     Private Sub cmbSubtopics_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbSubtopics.SelectedIndexChanged
+        txtNotes.Focus()
         Try
             connection.Open()
             Dim query As String = "SELECT notes, img FROM SubtopicsTbl WHERE subTitle = @subTitle"
@@ -171,12 +176,12 @@ Public Class Chapter1rev
             If reader.Read() Then
                 txtNotes.Text = reader("notes").ToString().Replace("_", vbCrLf)
                 txtNotes.Multiline = True
-                txtNotes.Width = 950
-                txtNotes.Height = CalculateTextBoxHeight(txtNotes.Text, New Font("Arial", 12), 950)
+                txtNotes.Width = 1000
+                'txtNotes.Height = CalculateTextBoxHeight(txtNotes.Text, New Font("Arial", 12), 950)
                 txtNotes.ReadOnly = True
                 txtNotes.Font = New Font("Arial", 12)
                 txtNotes.BackColor = ColorTranslator.FromHtml("#FFF8E9")
-                txtNotes.BorderStyle = BorderStyle.FixedSingle
+                txtNotes.BorderStyle = BorderStyle.None
 
                 ' Load image
                 If Not IsDBNull(reader("img")) Then
@@ -194,6 +199,15 @@ Public Class Chapter1rev
         Finally
             connection.Close()
         End Try
+    End Sub
+
+    Private Sub btnGame_Click(sender As Object, e As EventArgs) Handles btnGame.Click
+        Dim game As New MiniGamesForm
+        game.Show()
+    End Sub
+
+    Private Sub btnExit_Click(sender As Object, e As EventArgs) Handles btnExit.Click
+        Application.Exit()
     End Sub
 
 

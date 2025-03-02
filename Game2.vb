@@ -1,6 +1,6 @@
 ﻿Public Class Game2
     Private Sub btnLogo_Click(sender As Object, e As EventArgs) Handles btnLogo.Click
-        Dim mainmenuForm As New Form1()
+        Dim mainmenuForm As New btnPass()
         mainmenuForm.Show()
         Me.Hide()
     End Sub

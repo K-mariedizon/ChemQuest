@@ -17,13 +17,13 @@ Public Class MiniGamesForm
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        Dim mainmenuForm As New Form1
+        Dim mainmenuForm As New btnPass
         mainmenuForm.Show()
         Hide()
     End Sub
 
     Private Sub btnLogo_Click(sender As Object, e As EventArgs) Handles btnLogo.Click
-        Dim mainmenuForm As New Form1
+        Dim mainmenuForm As New btnPass
         mainmenuForm.Show()
         Hide()
     End Sub

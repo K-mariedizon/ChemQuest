@@ -205,8 +205,7 @@ Partial Class startgame2
         ' 
         ' startgame2
         ' 
-        AutoScaleDimensions = New SizeF(8F, 20F)
-        AutoScaleMode = AutoScaleMode.Font
+        AutoScaleMode = AutoScaleMode.None
         BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), Image)
         ClientSize = New Size(1445, 809)
         Controls.Add(btnMainMenu)
