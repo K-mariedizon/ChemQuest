@@ -176,7 +176,7 @@ Public Class Chapter1rev
             If reader.Read() Then
                 txtNotes.Text = reader("notes").ToString().Replace("_", vbCrLf)
                 txtNotes.Multiline = True
-                txtNotes.Width = 1000
+                'txtNotes.Width = 1025
                 'txtNotes.Height = CalculateTextBoxHeight(txtNotes.Text, New Font("Arial", 12), 950)
                 txtNotes.ReadOnly = True
                 txtNotes.Font = New Font("Arial", 12)
@@ -204,11 +204,15 @@ Public Class Chapter1rev
     Private Sub btnGame_Click(sender As Object, e As EventArgs) Handles btnGame.Click
         Dim game As New MiniGamesForm
         game.Show()
+        Me.Hide()
     End Sub
 
     Private Sub btnExit_Click(sender As Object, e As EventArgs) Handles btnExit.Click
         Application.Exit()
     End Sub
 
-
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        Dim rev As New reviewerCrud
+        rev.Show()
+    End Sub
 End Class

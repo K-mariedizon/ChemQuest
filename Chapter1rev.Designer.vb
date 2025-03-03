@@ -46,6 +46,8 @@ Partial Class Chapter1rev
         btnReviewer = New Button()
         TextBox3 = New TextBox()
         txtNotes = New RichTextBox()
+        txt = New RichTextBox()
+        Button1 = New Button()
         CType(picImage, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
@@ -280,19 +282,43 @@ Partial Class Chapter1rev
         TextBox3.Multiline = True
         TextBox3.Name = "TextBox3"
         TextBox3.ReadOnly = True
-        TextBox3.Size = New Size(990, 28)
+        TextBox3.Size = New Size(1213, 28)
         TextBox3.TabIndex = 62
         ' 
         ' txtNotes
         ' 
         txtNotes.BackColor = Color.FromArgb(CByte(255), CByte(248), CByte(233))
         txtNotes.BorderStyle = BorderStyle.None
-        txtNotes.Location = New Point(372, 106)
+        txtNotes.Location = New Point(396, 121)
         txtNotes.Name = "txtNotes"
         txtNotes.ReadOnly = True
-        txtNotes.Size = New Size(1026, 671)
-        txtNotes.TabIndex = 63
+        txtNotes.Size = New Size(1002, 611)
+        txtNotes.TabIndex = 64
         txtNotes.Text = ""
+        ' 
+        ' txt
+        ' 
+        txt.BackColor = Color.FromArgb(CByte(255), CByte(248), CByte(233))
+        txt.BorderStyle = BorderStyle.None
+        txt.Location = New Point(372, 105)
+        txt.Name = "txt"
+        txt.ReadOnly = True
+        txt.Size = New Size(1026, 642)
+        txt.TabIndex = 65
+        txt.Text = ""
+        ' 
+        ' Button1
+        ' 
+        Button1.BackColor = Color.FromArgb(CByte(83), CByte(67), CByte(55))
+        Button1.FlatStyle = FlatStyle.Flat
+        Button1.Font = New Font("Arial Rounded MT Bold", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Button1.ForeColor = Color.FromArgb(CByte(255), CByte(248), CByte(233))
+        Button1.Location = New Point(372, 753)
+        Button1.Name = "Button1"
+        Button1.Size = New Size(160, 31)
+        Button1.TabIndex = 66
+        Button1.Text = "Edit Reviewer"
+        Button1.UseVisualStyleBackColor = False
         ' 
         ' Chapter1rev
         ' 
@@ -300,6 +326,7 @@ Partial Class Chapter1rev
         BackColor = Color.FromArgb(CByte(195), CByte(235), CByte(222))
         BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), Image)
         ClientSize = New Size(1440, 806)
+        Controls.Add(Button1)
         Controls.Add(txtNotes)
         Controls.Add(btnReviewer)
         Controls.Add(btnLogo)
@@ -323,6 +350,7 @@ Partial Class Chapter1rev
         Controls.Add(TextBox1)
         Controls.Add(TextBox2)
         Controls.Add(TextBox3)
+        Controls.Add(txt)
         MaximizeBox = False
         MinimizeBox = False
         Name = "Chapter1rev"
@@ -355,4 +383,6 @@ Partial Class Chapter1rev
     Friend WithEvents btnReviewer As Button
     Friend WithEvents TextBox3 As TextBox
     Friend WithEvents txtNotes As RichTextBox
+    Friend WithEvents txt As RichTextBox
+    Friend WithEvents Button1 As Button
 End Class

@@ -31,6 +31,13 @@ Module ModuleLog
         oledbAdapterAccount.Fill(accountDataSet, "accountTbl")
     End Sub
 
+    Public Sub notesSet()
+        sql = "Select * from SubtopicsTbl"
+        oledbAdapterAccount = New OleDbDataAdapter(sql, oledbCnn)
+        oledbAdapterAccount.Fill(accountDataSet, "SubtopicsTbl")
+    End Sub
+
+
     Public Sub BuilderConn(ByVal b As OleDbDataAdapter)
         Dim builder As New OleDbCommandBuilder(b)
         builder.GetUpdateCommand()
