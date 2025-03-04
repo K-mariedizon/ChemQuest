@@ -36,6 +36,7 @@ Partial Class reviewerCrud
         grpDisplay = New GroupBox()
         Label3 = New Label()
         PictureBox1 = New PictureBox()
+        Label4 = New Label()
         grpDisplay.SuspendLayout()
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
@@ -65,7 +66,7 @@ Partial Class reviewerCrud
         cmbChap.BackColor = Color.OldLace
         cmbChap.Font = New Font("Calibri", 10.2F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         cmbChap.FormattingEnabled = True
-        cmbChap.Location = New Point(21, 78)
+        cmbChap.Location = New Point(24, 62)
         cmbChap.Name = "cmbChap"
         cmbChap.Size = New Size(212, 29)
         cmbChap.TabIndex = 2
@@ -138,21 +139,21 @@ Partial Class reviewerCrud
         ' 
         Label1.AutoSize = True
         Label1.Font = New Font("Arial Rounded MT Bold", 9F)
-        Label1.Location = New Point(32, 41)
+        Label1.Location = New Point(27, 41)
         Label1.Name = "Label1"
-        Label1.Size = New Size(67, 17)
+        Label1.Size = New Size(72, 17)
         Label1.TabIndex = 9
-        Label1.Text = "Chapter"
+        Label1.Text = "Chapter:"
         ' 
         ' Label2
         ' 
         Label2.AutoSize = True
         Label2.Font = New Font("Arial Rounded MT Bold", 9F)
-        Label2.Location = New Point(32, 86)
+        Label2.Location = New Point(27, 86)
         Label2.Name = "Label2"
-        Label2.Size = New Size(72, 17)
+        Label2.Size = New Size(77, 17)
         Label2.TabIndex = 10
-        Label2.Text = "Subtopic"
+        Label2.Text = "Subtopic:"
         ' 
         ' grpDisplay
         ' 
@@ -190,12 +191,24 @@ Partial Class reviewerCrud
         PictureBox1.TabIndex = 13
         PictureBox1.TabStop = False
         ' 
+        ' Label4
+        ' 
+        Label4.AutoSize = True
+        Label4.Font = New Font("Arial Rounded MT Bold", 9F)
+        Label4.ForeColor = Color.OldLace
+        Label4.Location = New Point(21, 106)
+        Label4.Name = "Label4"
+        Label4.Size = New Size(85, 17)
+        Label4.TabIndex = 11
+        Label4.Text = "Subtopics:"
+        ' 
         ' reviewerCrud
         ' 
         AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.FromArgb(CByte(83), CByte(67), CByte(55))
         ClientSize = New Size(1215, 737)
+        Controls.Add(Label4)
         Controls.Add(Label3)
         Controls.Add(btnCancel)
         Controls.Add(cmbChap)
@@ -210,6 +223,7 @@ Partial Class reviewerCrud
         Name = "reviewerCrud"
         StartPosition = FormStartPosition.CenterScreen
         Text = "reviewerCrud"
+        TopMost = True
         grpDisplay.ResumeLayout(False)
         grpDisplay.PerformLayout()
         CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()
@@ -231,4 +245,5 @@ Partial Class reviewerCrud
     Friend WithEvents grpDisplay As GroupBox
     Friend WithEvents Label3 As Label
     Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents Label4 As Label
 End Class

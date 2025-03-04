@@ -34,6 +34,7 @@ Partial Class Game3
         btnnote1 = New Button()
         btnPlay = New Button()
         btnHscore = New Button()
+        Button1 = New Button()
         SuspendLayout()
         ' 
         ' btnLogo
@@ -164,11 +165,25 @@ Partial Class Game3
         btnHscore.TabIndex = 43
         btnHscore.UseVisualStyleBackColor = True
         ' 
+        ' Button1
+        ' 
+        Button1.BackColor = Color.FromArgb(CByte(83), CByte(67), CByte(55))
+        Button1.FlatStyle = FlatStyle.Flat
+        Button1.Font = New Font("Arial Rounded MT Bold", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Button1.ForeColor = Color.OldLace
+        Button1.Location = New Point(938, 107)
+        Button1.Name = "Button1"
+        Button1.Size = New Size(139, 35)
+        Button1.TabIndex = 45
+        Button1.Text = "Edit Game3"
+        Button1.UseVisualStyleBackColor = False
+        ' 
         ' Game3
         ' 
         AutoScaleMode = AutoScaleMode.None
         BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), Image)
         ClientSize = New Size(1440, 810)
+        Controls.Add(Button1)
         Controls.Add(btnPlay)
         Controls.Add(btnHscore)
         Controls.Add(btnnote3)
@@ -197,4 +212,5 @@ Partial Class Game3
     Friend WithEvents btnnote1 As Button
     Friend WithEvents btnPlay As Button
     Friend WithEvents btnHscore As Button
+    Friend WithEvents Button1 As Button
 End Class

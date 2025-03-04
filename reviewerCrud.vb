@@ -71,6 +71,8 @@ Public Class reviewerCrud
     End Sub
 
     Private Sub btnAdd_Click(sender As Object, e As EventArgs) Handles btnAdd.Click
+        txtChap.Enabled = True
+        txtSub.Enabled = True
         If btnAdd.Text = "Add" Then
             btnUpdate.Enabled = False
             btnDelete.Enabled = False
@@ -133,25 +135,24 @@ Public Class reviewerCrud
                 oledbAdapterAccount.Update(accountDataSet, "SubtopicsTbl")
 
                 MessageBox.Show("Note updated successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information)
-                btnUpdate.Text = "Update"
-                btnAdd.Enabled = True
-                btnDelete.Enabled = True
-                stateControl(True, True, False)
             Else
                 MessageBox.Show("No record found to update.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
             End If
+            btnUpdate.Text = "Update"
+            btnAdd.Enabled = True
+            btnDelete.Enabled = True
+            stateControl(True, True, False)
         End If
     End Sub
 
     Private Sub btnDelete_Click(sender As Object, e As EventArgs) Handles btnDelete.Click
-        grpDisplay.Enabled = False
-        btnAdd.Enabled = False
-        btnUpdate.Enabled = False
-        stateControl(False, False, True)
         If txtChap.Text = "" Or txtSub.Text = "" Then
             MessageBox.Show("Please select a note to delete.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning)
             Return
         End If
+        grpDisplay.Enabled = False
+        btnAdd.Enabled = False
+        btnUpdate.Enabled = False
 
         If MessageBox.Show("Do you want to delete this whole chapter?", "delete Note", MessageBoxButtons.YesNo) = DialogResult.Yes Then
             Dim dt As DataTable = accountDataSet.Tables("SubtopicsTbl")
