@@ -63,4 +63,9 @@
     Private Sub Game2_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
     End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        Dim Game2c As New Game2crud()
+        Game2c.Show()
+    End Sub
 End Class

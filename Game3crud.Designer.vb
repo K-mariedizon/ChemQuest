@@ -196,7 +196,9 @@ Partial Class Game3crud
         Controls.Add(btnadddd)
         Controls.Add(lstboxMG3)
         Name = "Game3crud"
+        StartPosition = FormStartPosition.CenterScreen
         Text = "Game3crud"
+        TopMost = True
         grpG3.ResumeLayout(False)
         grpG3.PerformLayout()
         ResumeLayout(False)

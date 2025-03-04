@@ -284,7 +284,9 @@ Partial Class Game2crud
         Controls.Add(btnaddd)
         Controls.Add(lstboxMG2)
         Name = "Game2crud"
+        StartPosition = FormStartPosition.CenterScreen
         Text = "Game2crud"
+        TopMost = True
         grpG2.ResumeLayout(False)
         grpG2.PerformLayout()
         ResumeLayout(False)
