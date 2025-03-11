@@ -25,7 +25,7 @@ Partial Class Game1crud
         lstboxMG = New ListBox()
         txtQuestion = New TextBox()
         txtCorrectAnswer = New TextBox()
-        txtRandomAnswer = New TextBox()
+        txtRandomAnswers = New TextBox()
         btnadd = New Button()
         btnupdate = New Button()
         btndelete = New Button()
@@ -35,15 +35,20 @@ Partial Class Game1crud
         Label2 = New Label()
         Label1 = New Label()
         grpG1 = New GroupBox()
+        PictureBox1 = New PictureBox()
+        Label5 = New Label()
         grpG1.SuspendLayout()
+        CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
         ' lstboxMG
         ' 
+        lstboxMG.BackColor = Color.OldLace
+        lstboxMG.ForeColor = Color.Black
         lstboxMG.FormattingEnabled = True
-        lstboxMG.Location = New Point(12, 69)
+        lstboxMG.Location = New Point(33, 86)
         lstboxMG.Name = "lstboxMG"
-        lstboxMG.Size = New Size(365, 484)
+        lstboxMG.Size = New Size(365, 504)
         lstboxMG.TabIndex = 0
         ' 
         ' txtQuestion
@@ -62,53 +67,61 @@ Partial Class Game1crud
         txtCorrectAnswer.Size = New Size(414, 87)
         txtCorrectAnswer.TabIndex = 2
         ' 
-        ' txtRandomAnswer
+        ' txtRandomAnswers
         ' 
-        txtRandomAnswer.Location = New Point(170, 281)
-        txtRandomAnswer.Multiline = True
-        txtRandomAnswer.Name = "txtRandomAnswer"
-        txtRandomAnswer.Size = New Size(414, 79)
-        txtRandomAnswer.TabIndex = 3
+        txtRandomAnswers.Location = New Point(170, 281)
+        txtRandomAnswers.Multiline = True
+        txtRandomAnswers.Name = "txtRandomAnswers"
+        txtRandomAnswers.Size = New Size(414, 79)
+        txtRandomAnswers.TabIndex = 3
         ' 
         ' btnadd
         ' 
+        btnadd.BackColor = Color.OldLace
+        btnadd.FlatStyle = FlatStyle.Flat
         btnadd.Font = New Font("Arial Rounded MT Bold", 9F)
-        btnadd.Location = New Point(511, 573)
+        btnadd.Location = New Point(530, 540)
         btnadd.Name = "btnadd"
         btnadd.Size = New Size(94, 29)
         btnadd.TabIndex = 4
         btnadd.Text = "Add"
-        btnadd.UseVisualStyleBackColor = True
+        btnadd.UseVisualStyleBackColor = False
         ' 
         ' btnupdate
         ' 
+        btnupdate.BackColor = Color.OldLace
+        btnupdate.FlatStyle = FlatStyle.Flat
         btnupdate.Font = New Font("Arial Rounded MT Bold", 9F)
-        btnupdate.Location = New Point(647, 573)
+        btnupdate.Location = New Point(666, 540)
         btnupdate.Name = "btnupdate"
         btnupdate.Size = New Size(94, 29)
         btnupdate.TabIndex = 5
         btnupdate.Text = "Update"
-        btnupdate.UseVisualStyleBackColor = True
+        btnupdate.UseVisualStyleBackColor = False
         ' 
         ' btndelete
         ' 
+        btndelete.BackColor = Color.OldLace
+        btndelete.FlatStyle = FlatStyle.Flat
         btndelete.Font = New Font("Arial Rounded MT Bold", 9F)
-        btndelete.Location = New Point(771, 573)
+        btndelete.Location = New Point(790, 540)
         btndelete.Name = "btndelete"
         btndelete.Size = New Size(94, 29)
         btndelete.TabIndex = 6
         btndelete.Text = "Delete"
-        btndelete.UseVisualStyleBackColor = True
+        btndelete.UseVisualStyleBackColor = False
         ' 
         ' btncancel
         ' 
+        btncancel.BackColor = Color.OldLace
+        btncancel.FlatStyle = FlatStyle.Flat
         btncancel.Font = New Font("Arial Rounded MT Bold", 9F)
-        btncancel.Location = New Point(896, 573)
+        btncancel.Location = New Point(915, 540)
         btncancel.Name = "btncancel"
         btncancel.Size = New Size(94, 29)
         btncancel.TabIndex = 7
         btncancel.Text = "Cancel"
-        btncancel.UseVisualStyleBackColor = True
+        btncancel.UseVisualStyleBackColor = False
         ' 
         ' Label4
         ' 
@@ -149,45 +162,73 @@ Partial Class Game1crud
         ' 
         ' grpG1
         ' 
+        grpG1.BackColor = Color.OldLace
         grpG1.Controls.Add(txtQuestion)
         grpG1.Controls.Add(Label4)
         grpG1.Controls.Add(txtCorrectAnswer)
         grpG1.Controls.Add(Label3)
-        grpG1.Controls.Add(txtRandomAnswer)
+        grpG1.Controls.Add(txtRandomAnswers)
         grpG1.Controls.Add(Label2)
         grpG1.Controls.Add(Label1)
         grpG1.Font = New Font("Arial Rounded MT Bold", 9F)
-        grpG1.Location = New Point(412, 79)
+        grpG1.Location = New Point(450, 58)
         grpG1.Name = "grpG1"
-        grpG1.Size = New Size(657, 474)
+        grpG1.Size = New Size(638, 462)
         grpG1.TabIndex = 19
         grpG1.TabStop = False
         grpG1.Text = "Game1 Information"
+        ' 
+        ' PictureBox1
+        ' 
+        PictureBox1.BackColor = Color.Tan
+        PictureBox1.Location = New Point(425, 23)
+        PictureBox1.Name = "PictureBox1"
+        PictureBox1.Size = New Size(695, 567)
+        PictureBox1.TabIndex = 20
+        PictureBox1.TabStop = False
+        ' 
+        ' Label5
+        ' 
+        Label5.AutoSize = True
+        Label5.Font = New Font("Goudy Stout", 10.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label5.ForeColor = Color.OldLace
+        Label5.Location = New Point(33, 39)
+        Label5.Name = "Label5"
+        Label5.Size = New Size(241, 24)
+        Label5.TabIndex = 21
+        Label5.Text = "GAME 1 - EDIT"
         ' 
         ' Game1crud
         ' 
         AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(1122, 647)
+        BackColor = Color.FromArgb(CByte(83), CByte(67), CByte(55))
+        ClientSize = New Size(1132, 620)
+        Controls.Add(Label5)
         Controls.Add(grpG1)
         Controls.Add(btncancel)
         Controls.Add(btndelete)
         Controls.Add(btnupdate)
         Controls.Add(btnadd)
         Controls.Add(lstboxMG)
+        Controls.Add(PictureBox1)
+        MaximizeBox = False
+        MinimizeBox = False
         Name = "Game1crud"
         StartPosition = FormStartPosition.CenterScreen
         Text = "Game1crud"
         TopMost = True
         grpG1.ResumeLayout(False)
         grpG1.PerformLayout()
+        CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
+        PerformLayout()
     End Sub
 
     Friend WithEvents lstboxMG As ListBox
     Friend WithEvents txtQuestion As TextBox
     Friend WithEvents txtCorrectAnswer As TextBox
-    Friend WithEvents txtRandomAnswer As TextBox
+    Friend WithEvents txtRandomAnswers As TextBox
     Friend WithEvents btnadd As Button
     Friend WithEvents btnupdate As Button
     Friend WithEvents btndelete As Button
@@ -197,4 +238,6 @@ Partial Class Game1crud
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
     Friend WithEvents grpG1 As GroupBox
+    Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents Label5 As Label
 End Class

@@ -48,9 +48,9 @@
     End Sub
 
     Private Sub btnProceed_Click(sender As Object, e As EventArgs) Handles btnProceed.Click
-        Dim revForm As New Chapter3rev()
-        revForm.Show()
-        Me.Hide()
+        'Dim revForm As New Chapter3rev()
+        'revForm.Show()
+        'Me.Hide()
     End Sub
     Private Sub btnnote1_Click(sender As Object, e As EventArgs) Handles btnnote1.Click
         Dim notesForm As New NoteViewerForm("note1.txt")

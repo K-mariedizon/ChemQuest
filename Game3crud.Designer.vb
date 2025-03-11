@@ -36,7 +36,10 @@ Partial Class Game3crud
         btnadddd = New Button()
         lstboxMG3 = New ListBox()
         grpG3 = New GroupBox()
+        PictureBox1 = New PictureBox()
+        Label7 = New Label()
         grpG3.SuspendLayout()
+        CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
         ' Label5
@@ -115,59 +118,69 @@ Partial Class Game3crud
         ' 
         ' btncancelll
         ' 
+        btncancelll.BackColor = Color.OldLace
+        btncancelll.FlatStyle = FlatStyle.Flat
         btncancelll.Font = New Font("Arial Rounded MT Bold", 9F)
-        btncancelll.Location = New Point(1185, 533)
+        btncancelll.Location = New Point(1136, 513)
         btncancelll.Margin = New Padding(3, 4, 3, 4)
         btncancelll.Name = "btncancelll"
         btncancelll.Size = New Size(96, 32)
         btncancelll.TabIndex = 33
         btncancelll.Text = "Cancel"
-        btncancelll.UseVisualStyleBackColor = True
+        btncancelll.UseVisualStyleBackColor = False
         ' 
         ' btndeleteee
         ' 
+        btndeleteee.BackColor = Color.OldLace
+        btndeleteee.FlatStyle = FlatStyle.Flat
         btndeleteee.Font = New Font("Arial Rounded MT Bold", 9F)
-        btndeleteee.Location = New Point(1044, 533)
+        btndeleteee.Location = New Point(995, 513)
         btndeleteee.Margin = New Padding(3, 4, 3, 4)
         btndeleteee.Name = "btndeleteee"
         btndeleteee.Size = New Size(96, 32)
         btndeleteee.TabIndex = 32
         btndeleteee.Text = "Delete"
-        btndeleteee.UseVisualStyleBackColor = True
+        btndeleteee.UseVisualStyleBackColor = False
         ' 
         ' btnupdateee
         ' 
+        btnupdateee.BackColor = Color.OldLace
+        btnupdateee.FlatStyle = FlatStyle.Flat
         btnupdateee.Font = New Font("Arial Rounded MT Bold", 9F)
-        btnupdateee.Location = New Point(906, 533)
+        btnupdateee.Location = New Point(857, 513)
         btnupdateee.Margin = New Padding(3, 4, 3, 4)
         btnupdateee.Name = "btnupdateee"
         btnupdateee.Size = New Size(96, 32)
         btnupdateee.TabIndex = 31
         btnupdateee.Text = "Update"
-        btnupdateee.UseVisualStyleBackColor = True
+        btnupdateee.UseVisualStyleBackColor = False
         ' 
         ' btnadddd
         ' 
+        btnadddd.BackColor = Color.OldLace
+        btnadddd.FlatStyle = FlatStyle.Flat
         btnadddd.Font = New Font("Arial Rounded MT Bold", 9F)
-        btnadddd.Location = New Point(758, 533)
+        btnadddd.Location = New Point(712, 513)
         btnadddd.Margin = New Padding(3, 4, 3, 4)
         btnadddd.Name = "btnadddd"
         btnadddd.Size = New Size(96, 32)
         btnadddd.TabIndex = 30
         btnadddd.Text = "Add "
-        btnadddd.UseVisualStyleBackColor = True
+        btnadddd.UseVisualStyleBackColor = False
         ' 
         ' lstboxMG3
         ' 
+        lstboxMG3.BackColor = Color.OldLace
         lstboxMG3.FormattingEnabled = True
-        lstboxMG3.Location = New Point(23, 61)
+        lstboxMG3.Location = New Point(27, 81)
         lstboxMG3.Margin = New Padding(3, 4, 3, 4)
         lstboxMG3.Name = "lstboxMG3"
-        lstboxMG3.Size = New Size(649, 524)
+        lstboxMG3.Size = New Size(556, 484)
         lstboxMG3.TabIndex = 29
         ' 
         ' grpG3
         ' 
+        grpG3.BackColor = Color.OldLace
         grpG3.Controls.Add(txtQuestionnn)
         grpG3.Controls.Add(Label5)
         grpG3.Controls.Add(txtCorrectAnswerrr)
@@ -177,31 +190,58 @@ Partial Class Game3crud
         grpG3.Controls.Add(Label1)
         grpG3.Controls.Add(Label2)
         grpG3.Font = New Font("Arial Rounded MT Bold", 9F)
-        grpG3.Location = New Point(700, 72)
+        grpG3.Location = New Point(646, 65)
         grpG3.Name = "grpG3"
         grpG3.Size = New Size(614, 420)
         grpG3.TabIndex = 42
         grpG3.TabStop = False
         grpG3.Text = "Game3 Information"
         ' 
+        ' PictureBox1
+        ' 
+        PictureBox1.BackColor = Color.Tan
+        PictureBox1.Location = New Point(622, 32)
+        PictureBox1.Name = "PictureBox1"
+        PictureBox1.Size = New Size(661, 533)
+        PictureBox1.TabIndex = 69
+        PictureBox1.TabStop = False
+        ' 
+        ' Label7
+        ' 
+        Label7.AutoSize = True
+        Label7.Font = New Font("Goudy Stout", 10.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label7.ForeColor = Color.OldLace
+        Label7.Location = New Point(27, 42)
+        Label7.Name = "Label7"
+        Label7.Size = New Size(241, 24)
+        Label7.TabIndex = 70
+        Label7.Text = "GAME 3 - EDIT"
+        ' 
         ' Game3crud
         ' 
         AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(1338, 636)
+        BackColor = Color.FromArgb(CByte(83), CByte(67), CByte(55))
+        ClientSize = New Size(1314, 614)
+        Controls.Add(Label7)
         Controls.Add(grpG3)
         Controls.Add(btncancelll)
         Controls.Add(btndeleteee)
         Controls.Add(btnupdateee)
         Controls.Add(btnadddd)
         Controls.Add(lstboxMG3)
+        Controls.Add(PictureBox1)
+        MaximizeBox = False
+        MinimizeBox = False
         Name = "Game3crud"
         StartPosition = FormStartPosition.CenterScreen
         Text = "Game3crud"
         TopMost = True
         grpG3.ResumeLayout(False)
         grpG3.PerformLayout()
+        CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
+        PerformLayout()
     End Sub
 
     Friend WithEvents Label5 As Label
@@ -218,4 +258,6 @@ Partial Class Game3crud
     Friend WithEvents btnadddd As Button
     Friend WithEvents lstboxMG3 As ListBox
     Friend WithEvents grpG3 As GroupBox
+    Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents Label7 As Label
 End Class

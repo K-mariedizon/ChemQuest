@@ -44,7 +44,12 @@ Partial Class Game2crud
         btnaddd = New Button()
         lstboxMG2 = New ListBox()
         grpG2 = New GroupBox()
+        txtPatientName = New TextBox()
+        Label6 = New Label()
+        PictureBox1 = New PictureBox()
+        Label7 = New Label()
         grpG2.SuspendLayout()
+        CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
         ' Label5
@@ -195,6 +200,8 @@ Partial Class Game2crud
         ' 
         ' btncancell
         ' 
+        btncancell.BackColor = Color.OldLace
+        btncancell.FlatStyle = FlatStyle.Flat
         btncancell.Font = New Font("Arial Rounded MT Bold", 9F)
         btncancell.Location = New Point(1034, 590)
         btncancell.Margin = New Padding(3, 4, 3, 4)
@@ -202,10 +209,12 @@ Partial Class Game2crud
         btncancell.Size = New Size(95, 31)
         btncancell.TabIndex = 50
         btncancell.Text = "Cancel"
-        btncancell.UseVisualStyleBackColor = True
+        btncancell.UseVisualStyleBackColor = False
         ' 
         ' btndeletee
         ' 
+        btndeletee.BackColor = Color.OldLace
+        btndeletee.FlatStyle = FlatStyle.Flat
         btndeletee.Font = New Font("Arial Rounded MT Bold", 9F)
         btndeletee.Location = New Point(894, 590)
         btndeletee.Margin = New Padding(3, 4, 3, 4)
@@ -213,10 +222,12 @@ Partial Class Game2crud
         btndeletee.Size = New Size(95, 31)
         btndeletee.TabIndex = 49
         btndeletee.Text = "Delete"
-        btndeletee.UseVisualStyleBackColor = True
+        btndeletee.UseVisualStyleBackColor = False
         ' 
         ' btnupdatee
         ' 
+        btnupdatee.BackColor = Color.OldLace
+        btnupdatee.FlatStyle = FlatStyle.Flat
         btnupdatee.Font = New Font("Arial Rounded MT Bold", 9F)
         btnupdatee.Location = New Point(759, 590)
         btnupdatee.Margin = New Padding(3, 4, 3, 4)
@@ -224,10 +235,12 @@ Partial Class Game2crud
         btnupdatee.Size = New Size(95, 31)
         btnupdatee.TabIndex = 48
         btnupdatee.Text = "Update"
-        btnupdatee.UseVisualStyleBackColor = True
+        btnupdatee.UseVisualStyleBackColor = False
         ' 
         ' btnaddd
         ' 
+        btnaddd.BackColor = Color.OldLace
+        btnaddd.FlatStyle = FlatStyle.Flat
         btnaddd.Font = New Font("Arial Rounded MT Bold", 9F)
         btnaddd.Location = New Point(609, 590)
         btnaddd.Margin = New Padding(3, 4, 3, 4)
@@ -235,19 +248,23 @@ Partial Class Game2crud
         btnaddd.Size = New Size(95, 31)
         btnaddd.TabIndex = 47
         btnaddd.Text = "Add "
-        btnaddd.UseVisualStyleBackColor = True
+        btnaddd.UseVisualStyleBackColor = False
         ' 
         ' lstboxMG2
         ' 
+        lstboxMG2.BackColor = Color.OldLace
         lstboxMG2.FormattingEnabled = True
-        lstboxMG2.Location = New Point(12, 62)
+        lstboxMG2.Location = New Point(25, 114)
         lstboxMG2.Margin = New Padding(3, 4, 3, 4)
         lstboxMG2.Name = "lstboxMG2"
-        lstboxMG2.Size = New Size(345, 584)
+        lstboxMG2.Size = New Size(300, 524)
         lstboxMG2.TabIndex = 46
         ' 
         ' grpG2
         ' 
+        grpG2.BackColor = Color.OldLace
+        grpG2.Controls.Add(txtPatientName)
+        grpG2.Controls.Add(Label6)
         grpG2.Controls.Add(txtAge)
         grpG2.Controls.Add(Label5)
         grpG2.Controls.Add(Label2)
@@ -265,31 +282,75 @@ Partial Class Game2crud
         grpG2.Controls.Add(txtRandAnss)
         grpG2.Controls.Add(txtCorrectAnswerr)
         grpG2.Font = New Font("Arial Rounded MT Bold", 9F)
-        grpG2.Location = New Point(379, 62)
+        grpG2.Location = New Point(386, 80)
         grpG2.Name = "grpG2"
-        grpG2.Size = New Size(973, 494)
+        grpG2.Size = New Size(954, 486)
         grpG2.TabIndex = 67
         grpG2.TabStop = False
         grpG2.Text = "Game2 Information"
+        ' 
+        ' txtPatientName
+        ' 
+        txtPatientName.Location = New Point(135, 48)
+        txtPatientName.Margin = New Padding(3, 4, 3, 4)
+        txtPatientName.Name = "txtPatientName"
+        txtPatientName.Size = New Size(161, 25)
+        txtPatientName.TabIndex = 67
+        ' 
+        ' Label6
+        ' 
+        Label6.AutoSize = True
+        Label6.Location = New Point(84, 51)
+        Label6.Name = "Label6"
+        Label6.Size = New Size(50, 17)
+        Label6.TabIndex = 68
+        Label6.Text = "Name"
+        ' 
+        ' PictureBox1
+        ' 
+        PictureBox1.BackColor = Color.Tan
+        PictureBox1.Location = New Point(359, 51)
+        PictureBox1.Name = "PictureBox1"
+        PictureBox1.Size = New Size(1008, 587)
+        PictureBox1.TabIndex = 68
+        PictureBox1.TabStop = False
+        ' 
+        ' Label7
+        ' 
+        Label7.AutoSize = True
+        Label7.Font = New Font("Goudy Stout", 10.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label7.ForeColor = Color.OldLace
+        Label7.Location = New Point(25, 66)
+        Label7.Name = "Label7"
+        Label7.Size = New Size(241, 24)
+        Label7.TabIndex = 69
+        Label7.Text = "GAME 2 - EDIT"
         ' 
         ' Game2crud
         ' 
         AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(1372, 723)
+        BackColor = Color.FromArgb(CByte(83), CByte(67), CByte(55))
+        ClientSize = New Size(1379, 688)
+        Controls.Add(Label7)
         Controls.Add(grpG2)
         Controls.Add(btncancell)
         Controls.Add(btndeletee)
         Controls.Add(btnupdatee)
         Controls.Add(btnaddd)
         Controls.Add(lstboxMG2)
+        Controls.Add(PictureBox1)
+        MaximizeBox = False
+        MinimizeBox = False
         Name = "Game2crud"
         StartPosition = FormStartPosition.CenterScreen
         Text = "Game2crud"
         TopMost = True
         grpG2.ResumeLayout(False)
         grpG2.PerformLayout()
+        CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
+        PerformLayout()
     End Sub
 
     Friend WithEvents Label5 As Label
@@ -314,4 +375,8 @@ Partial Class Game2crud
     Friend WithEvents btnaddd As Button
     Friend WithEvents lstboxMG2 As ListBox
     Friend WithEvents grpG2 As GroupBox
+    Friend WithEvents txtPatientName As TextBox
+    Friend WithEvents Label6 As Label
+    Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents Label7 As Label
 End Class
