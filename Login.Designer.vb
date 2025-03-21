@@ -26,39 +26,52 @@ Partial Class Login
         txtUname = New TextBox()
         txtPword = New TextBox()
         btnLogin = New Button()
+        Button1 = New Button()
         SuspendLayout()
         ' 
         ' txtUname
         ' 
         txtUname.BorderStyle = BorderStyle.FixedSingle
         txtUname.Font = New Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        txtUname.Location = New Point(607, 420)
+        txtUname.Location = New Point(687, 380)
         txtUname.Multiline = True
         txtUname.Name = "txtUname"
-        txtUname.Size = New Size(268, 34)
+        txtUname.Size = New Size(220, 34)
         txtUname.TabIndex = 0
         ' 
         ' txtPword
         ' 
         txtPword.BorderStyle = BorderStyle.FixedSingle
         txtPword.Font = New Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        txtPword.Location = New Point(607, 506)
+        txtPword.Location = New Point(687, 440)
         txtPword.Multiline = True
         txtPword.Name = "txtPword"
-        txtPword.Size = New Size(268, 34)
+        txtPword.Size = New Size(220, 34)
         txtPword.TabIndex = 1
         ' 
         ' btnLogin
         ' 
-        btnLogin.BackColor = Color.Tan
+        btnLogin.BackColor = Color.BurlyWood
         btnLogin.FlatStyle = FlatStyle.Flat
         btnLogin.Font = New Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        btnLogin.Location = New Point(789, 361)
+        btnLogin.Location = New Point(673, 503)
         btnLogin.Name = "btnLogin"
-        btnLogin.Size = New Size(128, 37)
+        btnLogin.Size = New Size(126, 37)
         btnLogin.TabIndex = 2
         btnLogin.Text = "Login"
         btnLogin.UseVisualStyleBackColor = False
+        ' 
+        ' Button1
+        ' 
+        Button1.BackColor = Color.BurlyWood
+        Button1.FlatStyle = FlatStyle.Flat
+        Button1.Font = New Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Button1.Location = New Point(1316, 31)
+        Button1.Name = "Button1"
+        Button1.Size = New Size(112, 31)
+        Button1.TabIndex = 3
+        Button1.Text = "Guest Login"
+        Button1.UseVisualStyleBackColor = False
         ' 
         ' Login
         ' 
@@ -66,9 +79,11 @@ Partial Class Login
         BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), Image)
         BackgroundImageLayout = ImageLayout.Center
         ClientSize = New Size(1440, 808)
+        Controls.Add(Button1)
         Controls.Add(btnLogin)
         Controls.Add(txtPword)
         Controls.Add(txtUname)
+        DoubleBuffered = True
         MaximizeBox = False
         MinimizeBox = False
         Name = "Login"
@@ -81,4 +96,5 @@ Partial Class Login
     Friend WithEvents txtUname As TextBox
     Friend WithEvents txtPword As TextBox
     Friend WithEvents btnLogin As Button
+    Friend WithEvents Button1 As Button
 End Class

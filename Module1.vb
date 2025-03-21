@@ -1,7 +1,7 @@
 ﻿Imports System.Data.OleDb
 
 Module DatabaseModule
-    Public connectionString As String = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Kiana\Documents\AlgoMasters_Project\Database2.accdb"
+    Public connectionString As String = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=\\192.168.100.3\TableTutorDB\Database2.accdb;"
 
     ' Retrieves all questions for Form1
     Public Function GetQuestions() As DataTable

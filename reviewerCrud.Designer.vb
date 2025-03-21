@@ -34,10 +34,12 @@ Partial Class reviewerCrud
         Label1 = New Label()
         Label2 = New Label()
         grpDisplay = New GroupBox()
+        pbImage = New PictureBox()
         Label3 = New Label()
         PictureBox1 = New PictureBox()
         Label4 = New Label()
         grpDisplay.SuspendLayout()
+        CType(pbImage, ComponentModel.ISupportInitialize).BeginInit()
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
@@ -158,6 +160,7 @@ Partial Class reviewerCrud
         ' grpDisplay
         ' 
         grpDisplay.BackColor = Color.OldLace
+        grpDisplay.Controls.Add(pbImage)
         grpDisplay.Controls.Add(Label2)
         grpDisplay.Controls.Add(txtChap)
         grpDisplay.Controls.Add(txtSub)
@@ -170,6 +173,14 @@ Partial Class reviewerCrud
         grpDisplay.TabIndex = 11
         grpDisplay.TabStop = False
         grpDisplay.Text = "Chapter Information"
+        ' 
+        ' pbImage
+        ' 
+        pbImage.Location = New Point(612, 41)
+        pbImage.Name = "pbImage"
+        pbImage.Size = New Size(125, 62)
+        pbImage.TabIndex = 11
+        pbImage.TabStop = False
         ' 
         ' Label3
         ' 
@@ -226,6 +237,7 @@ Partial Class reviewerCrud
         TopMost = True
         grpDisplay.ResumeLayout(False)
         grpDisplay.PerformLayout()
+        CType(pbImage, ComponentModel.ISupportInitialize).EndInit()
         CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
         PerformLayout()
@@ -246,4 +258,5 @@ Partial Class reviewerCrud
     Friend WithEvents Label3 As Label
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents Label4 As Label
+    Friend WithEvents pbImage As PictureBox
 End Class

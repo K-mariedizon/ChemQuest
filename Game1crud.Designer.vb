@@ -48,7 +48,7 @@ Partial Class Game1crud
         lstboxMG.FormattingEnabled = True
         lstboxMG.Location = New Point(33, 86)
         lstboxMG.Name = "lstboxMG"
-        lstboxMG.Size = New Size(365, 504)
+        lstboxMG.Size = New Size(424, 504)
         lstboxMG.TabIndex = 0
         ' 
         ' txtQuestion
@@ -80,7 +80,7 @@ Partial Class Game1crud
         btnadd.BackColor = Color.OldLace
         btnadd.FlatStyle = FlatStyle.Flat
         btnadd.Font = New Font("Arial Rounded MT Bold", 9F)
-        btnadd.Location = New Point(530, 540)
+        btnadd.Location = New Point(585, 540)
         btnadd.Name = "btnadd"
         btnadd.Size = New Size(94, 29)
         btnadd.TabIndex = 4
@@ -92,7 +92,7 @@ Partial Class Game1crud
         btnupdate.BackColor = Color.OldLace
         btnupdate.FlatStyle = FlatStyle.Flat
         btnupdate.Font = New Font("Arial Rounded MT Bold", 9F)
-        btnupdate.Location = New Point(666, 540)
+        btnupdate.Location = New Point(721, 540)
         btnupdate.Name = "btnupdate"
         btnupdate.Size = New Size(94, 29)
         btnupdate.TabIndex = 5
@@ -104,7 +104,7 @@ Partial Class Game1crud
         btndelete.BackColor = Color.OldLace
         btndelete.FlatStyle = FlatStyle.Flat
         btndelete.Font = New Font("Arial Rounded MT Bold", 9F)
-        btndelete.Location = New Point(790, 540)
+        btndelete.Location = New Point(845, 540)
         btndelete.Name = "btndelete"
         btndelete.Size = New Size(94, 29)
         btndelete.TabIndex = 6
@@ -116,7 +116,7 @@ Partial Class Game1crud
         btncancel.BackColor = Color.OldLace
         btncancel.FlatStyle = FlatStyle.Flat
         btncancel.Font = New Font("Arial Rounded MT Bold", 9F)
-        btncancel.Location = New Point(915, 540)
+        btncancel.Location = New Point(970, 540)
         btncancel.Name = "btncancel"
         btncancel.Size = New Size(94, 29)
         btncancel.TabIndex = 7
@@ -127,7 +127,7 @@ Partial Class Game1crud
         ' 
         Label4.AutoSize = True
         Label4.ForeColor = Color.Red
-        Label4.Location = New Point(170, 363)
+        Label4.Location = New Point(176, 363)
         Label4.Name = "Label4"
         Label4.Size = New Size(408, 17)
         Label4.TabIndex = 18
@@ -171,7 +171,7 @@ Partial Class Game1crud
         grpG1.Controls.Add(Label2)
         grpG1.Controls.Add(Label1)
         grpG1.Font = New Font("Arial Rounded MT Bold", 9F)
-        grpG1.Location = New Point(450, 58)
+        grpG1.Location = New Point(505, 58)
         grpG1.Name = "grpG1"
         grpG1.Size = New Size(638, 462)
         grpG1.TabIndex = 19
@@ -181,7 +181,7 @@ Partial Class Game1crud
         ' PictureBox1
         ' 
         PictureBox1.BackColor = Color.Tan
-        PictureBox1.Location = New Point(425, 23)
+        PictureBox1.Location = New Point(480, 23)
         PictureBox1.Name = "PictureBox1"
         PictureBox1.Size = New Size(695, 567)
         PictureBox1.TabIndex = 20
@@ -203,7 +203,7 @@ Partial Class Game1crud
         AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.FromArgb(CByte(83), CByte(67), CByte(55))
-        ClientSize = New Size(1132, 620)
+        ClientSize = New Size(1197, 620)
         Controls.Add(Label5)
         Controls.Add(grpG1)
         Controls.Add(btncancel)

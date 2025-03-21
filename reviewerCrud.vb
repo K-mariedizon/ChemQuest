@@ -1,7 +1,10 @@
 ﻿Imports System.Data.OleDb
 Imports System.Windows.Forms.VisualStyles.VisualStyleElement
+Imports System.IO
 
 Public Class reviewerCrud
+
+
     Private Sub reviewerCrud_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         accountDataSet.Clear()
         stateControl(True, True, False)
@@ -70,6 +73,8 @@ Public Class reviewerCrud
         txtNotes.Clear()
     End Sub
 
+
+
     Private Sub btnAdd_Click(sender As Object, e As EventArgs) Handles btnAdd.Click
         txtChap.Enabled = True
         txtSub.Enabled = True
@@ -109,6 +114,8 @@ Public Class reviewerCrud
             ClearFields()
         End If
     End Sub
+
+
 
     Private Sub btnUpdate_Click(sender As Object, e As EventArgs) Handles btnUpdate.Click
         If txtChap.Text = "" Or txtSub.Text = "" Or txtNotes.Text = "" Then

@@ -2,7 +2,8 @@
 
 Module Module4
     ' Connection string for Access database
-    Private ReadOnly dbPath As String = "C:\Users\Kiana\Documents\AlgoMasters_Project\Database2.accdb"
+    Private ReadOnly dbPath As String = "\\192.168.100.3\TableTutorDB\Database2.accdb;"
+
     Private ReadOnly connectionString As String = $"Provider=Microsoft.ACE.OLEDB.12.0;Data Source={dbPath};Persist Security Info=False;"
 
     ' Function to get the database connection

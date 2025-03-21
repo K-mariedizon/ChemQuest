@@ -46,7 +46,7 @@ Partial Class Game3crud
         ' 
         Label5.AutoSize = True
         Label5.ForeColor = Color.Red
-        Label5.Location = New Point(249, 366)
+        Label5.Location = New Point(272, 363)
         Label5.Name = "Label5"
         Label5.Size = New Size(196, 17)
         Label5.TabIndex = 41
@@ -56,7 +56,7 @@ Partial Class Game3crud
         ' 
         Label4.AutoSize = True
         Label4.ForeColor = Color.Red
-        Label4.Location = New Point(168, 346)
+        Label4.Location = New Point(171, 346)
         Label4.Name = "Label4"
         Label4.Size = New Size(403, 17)
         Label4.TabIndex = 40
@@ -200,9 +200,9 @@ Partial Class Game3crud
         ' PictureBox1
         ' 
         PictureBox1.BackColor = Color.Tan
-        PictureBox1.Location = New Point(622, 32)
+        PictureBox1.Location = New Point(622, 42)
         PictureBox1.Name = "PictureBox1"
-        PictureBox1.Size = New Size(661, 533)
+        PictureBox1.Size = New Size(661, 523)
         PictureBox1.TabIndex = 69
         PictureBox1.TabStop = False
         ' 

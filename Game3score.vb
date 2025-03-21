@@ -2,7 +2,7 @@
 
 Public Class Game3score
     ' Connection string to the Access database
-    Public connectionString As String = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Kiana\Documents\AlgoMasters_Project\Database2.accdb"
+    Public connectionString As String = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=\\192.168.100.3\TableTutorDB\Database2.accdb;"
     Private Sub btnLogo_Click(sender As Object, e As EventArgs) Handles btnLogo.Click
         Dim mainmenuForm As New btnPass()
         mainmenuForm.Show()

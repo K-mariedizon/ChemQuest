@@ -98,7 +98,7 @@ Partial Class Profile
         GroupBox1.Controls.Add(txtPword)
         GroupBox1.FlatStyle = FlatStyle.Flat
         GroupBox1.ForeColor = Color.Black
-        GroupBox1.Location = New Point(34, 27)
+        GroupBox1.Location = New Point(22, 22)
         GroupBox1.Name = "GroupBox1"
         GroupBox1.Size = New Size(331, 275)
         GroupBox1.TabIndex = 4
@@ -120,7 +120,7 @@ Partial Class Profile
         AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.FromArgb(CByte(83), CByte(67), CByte(55))
-        ClientSize = New Size(394, 354)
+        ClientSize = New Size(380, 320)
         Controls.Add(btnCancel)
         Controls.Add(btnUpdate)
         Controls.Add(GroupBox1)

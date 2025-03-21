@@ -40,7 +40,7 @@ Partial Class Game2crud
         Label2 = New Label()
         btncancell = New Button()
         btndeletee = New Button()
-        btnupdatee = New Button()
+        btnupdate = New Button()
         btnaddd = New Button()
         lstboxMG2 = New ListBox()
         grpG2 = New GroupBox()
@@ -224,18 +224,18 @@ Partial Class Game2crud
         btndeletee.Text = "Delete"
         btndeletee.UseVisualStyleBackColor = False
         ' 
-        ' btnupdatee
+        ' btnupdate
         ' 
-        btnupdatee.BackColor = Color.OldLace
-        btnupdatee.FlatStyle = FlatStyle.Flat
-        btnupdatee.Font = New Font("Arial Rounded MT Bold", 9F)
-        btnupdatee.Location = New Point(759, 590)
-        btnupdatee.Margin = New Padding(3, 4, 3, 4)
-        btnupdatee.Name = "btnupdatee"
-        btnupdatee.Size = New Size(95, 31)
-        btnupdatee.TabIndex = 48
-        btnupdatee.Text = "Update"
-        btnupdatee.UseVisualStyleBackColor = False
+        btnupdate.BackColor = Color.OldLace
+        btnupdate.FlatStyle = FlatStyle.Flat
+        btnupdate.Font = New Font("Arial Rounded MT Bold", 9F)
+        btnupdate.Location = New Point(759, 590)
+        btnupdate.Margin = New Padding(3, 4, 3, 4)
+        btnupdate.Name = "btnupdate"
+        btnupdate.Size = New Size(95, 31)
+        btnupdate.TabIndex = 48
+        btnupdate.Text = "Update"
+        btnupdate.UseVisualStyleBackColor = False
         ' 
         ' btnaddd
         ' 
@@ -247,7 +247,7 @@ Partial Class Game2crud
         btnaddd.Name = "btnaddd"
         btnaddd.Size = New Size(95, 31)
         btnaddd.TabIndex = 47
-        btnaddd.Text = "Add "
+        btnaddd.Text = "Add"
         btnaddd.UseVisualStyleBackColor = False
         ' 
         ' lstboxMG2
@@ -309,9 +309,9 @@ Partial Class Game2crud
         ' PictureBox1
         ' 
         PictureBox1.BackColor = Color.Tan
-        PictureBox1.Location = New Point(359, 51)
+        PictureBox1.Location = New Point(359, 56)
         PictureBox1.Name = "PictureBox1"
-        PictureBox1.Size = New Size(1008, 587)
+        PictureBox1.Size = New Size(1008, 582)
         PictureBox1.TabIndex = 68
         PictureBox1.TabStop = False
         ' 
@@ -336,7 +336,7 @@ Partial Class Game2crud
         Controls.Add(grpG2)
         Controls.Add(btncancell)
         Controls.Add(btndeletee)
-        Controls.Add(btnupdatee)
+        Controls.Add(btnupdate)
         Controls.Add(btnaddd)
         Controls.Add(lstboxMG2)
         Controls.Add(PictureBox1)
@@ -371,7 +371,7 @@ Partial Class Game2crud
     Friend WithEvents Label2 As Label
     Friend WithEvents btncancell As Button
     Friend WithEvents btndeletee As Button
-    Friend WithEvents btnupdatee As Button
+    Friend WithEvents btnupdate As Button
     Friend WithEvents btnaddd As Button
     Friend WithEvents lstboxMG2 As ListBox
     Friend WithEvents grpG2 As GroupBox

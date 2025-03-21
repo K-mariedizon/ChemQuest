@@ -1,7 +1,7 @@
 ﻿Imports System.Data.OleDb
 
 Module Module3
-    Public ConnectionString As String = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Kiana\Documents\AlgoMasters_Project\Database2.accdb"
+    Public ConnectionString As String = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=\\192.168.100.3\TableTutorDB\Database2.accdb;"
 
     Public Function GetQuestions() As List(Of DataRow)
         Dim query As String = "SELECT * FROM DBMG3" ' Replace with your table name

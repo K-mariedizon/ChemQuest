@@ -1,7 +1,8 @@
 ﻿Imports System.Data.OleDb
 
 Public Class Game2crud
-    Private connectionString As String = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Kiana\Documents\AlgoMasters_Project\Database2.accdb"
+    Private connectionString As String = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=\\192.168.100.3\TableTutorDB\Database2.accdb;"
+
     Private Sub Game2crud_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         LoadPatients()
         ValidateFields()
@@ -109,7 +110,7 @@ Public Class Game2crud
 
 
     ' UPDATE PATIENT DATA
-    Private Sub btnupdatee_Click(sender As Object, e As EventArgs) Handles btnupdatee.Click
+    Private Sub btnupdatee_Click(sender As Object, e As EventArgs) Handles btnupdate.Click
         If lstboxMG2.SelectedIndex = -1 Then
             MessageBox.Show("Please select a patient to update.", "No Selection", MessageBoxButtons.OK, MessageBoxIcon.Warning)
             Exit Sub
@@ -192,7 +193,7 @@ Public Class Game2crud
                                    Not String.IsNullOrWhiteSpace(txtLabResults.Text)
 
         btnaddd.Enabled = allFilled
-        btnupdatee.Enabled = allFilled AndAlso lstboxMG2.SelectedIndex <> -1
+        btnupdate.Enabled = allFilled AndAlso lstboxMG2.SelectedIndex <> -1
         btndeletee.Enabled = lstboxMG2.SelectedIndex <> -1
     End Sub
 
@@ -200,5 +201,6 @@ Public Class Game2crud
     Private Sub TextFieldsChanged(sender As Object, e As EventArgs) Handles txtAge.TextChanged, txtGender.TextChanged, txtMedicalHistory.TextChanged, txtquestionn.TextChanged, txtCorrectAnswerr.TextChanged, txtRandAnss.TextChanged, txtLabResults.TextChanged
         ValidateFields()
     End Sub
+
 
 End Class

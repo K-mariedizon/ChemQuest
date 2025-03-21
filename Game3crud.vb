@@ -1,7 +1,7 @@
 ﻿Imports System.Data.OleDb
 
 Public Class Game3crud
-    Private connectionString As String = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Kiana\Documents\AlgoMasters_Project\Database2.accdb"
+    Private connectionString As String = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=\\192.168.100.3\TableTutorDB\Database2.accdb;"
     Private Sub Game3crud_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         LoadQuestions()
     End Sub
@@ -138,4 +138,6 @@ Public Class Game3crud
             End Using
         End If
     End Sub
+
+
 End Class

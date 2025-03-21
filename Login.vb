@@ -25,8 +25,8 @@
                     level = drow("Lvl")
 
                     Dim dashboard As New dashboard
-                    dashboard.Show()
-                    Me.Hide()
+                    dashboard.Show
+                    Hide
 
 
                     op = 1
@@ -40,8 +40,13 @@
             End If
         Else
             MessageBox.Show("maximum 3 tries only")
-            Application.Exit()
+            Application.Exit
 
         End If
+    End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        Dim log As New GuestLogin
+        log.Show()
     End Sub
 End Class

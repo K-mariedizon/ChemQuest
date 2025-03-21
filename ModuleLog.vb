@@ -12,7 +12,8 @@ Module ModuleLog
 
     Public Function OpenConnection() As Boolean
 
-        connectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Kiana\Documents\AlgoMasters_Project\Database2.accdb"
+        connectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=\\192.168.100.3\TableTutorDB\Database2.accdb;"
+
         oledbCnn = New OleDbConnection(connectionString)
 
         Try

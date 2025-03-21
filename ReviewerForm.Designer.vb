@@ -132,10 +132,10 @@ Partial Class ReviewerForm
         ' 
         ' Button1
         ' 
-        Button1.BackColor = Color.FromArgb(CByte(124), CByte(171), CByte(153))
+        Button1.BackColor = Color.AntiqueWhite
         Button1.FlatStyle = FlatStyle.Flat
         Button1.Font = New Font("Tahoma", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Button1.ForeColor = Color.Snow
+        Button1.ForeColor = SystemColors.ActiveCaptionText
         Button1.Location = New Point(817, 693)
         Button1.Name = "Button1"
         Button1.Size = New Size(182, 45)

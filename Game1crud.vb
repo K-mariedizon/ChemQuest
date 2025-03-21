@@ -7,10 +7,14 @@ Public Class Game1crud
     Private dt As DataTable
     Private selectedID As Integer = 0 ' Default no selection
 
+
     Private Sub Game1crud_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        grpG1.Enabled = False
+        btnadd.Enabled = True
+
         conn = Module4.GetConnection()
         LoadQuestions()
-        ValidateInputs() ' Ensure buttons start in the correct state
+        'ValidateInputs() ' Ensure buttons start in the correct state
     End Sub
 
     ' Load questions into ListBox
@@ -58,83 +62,144 @@ Public Class Game1crud
         btndelete.Enabled = selectedID > 0
     End Sub
 
+    Sub stateControl(ByVal lst As Boolean, ByVal grp As Boolean)
+        lstboxMG.Enabled = lst
+        grpG1.Enabled = grp
+        btnadd.Text = "Add"
+        btnupdate.Text = "Update"
+    End Sub
+
     ' Add a new question
     ' Add a new question
     Private Sub btnAdd_Click(sender As Object, e As EventArgs) Handles btnadd.Click
-        ' Ensure all fields are filled
-        If txtQuestion.Text = "" Or txtCorrectAnswer.Text = "" Or txtRandomAnswers.Text = "" Then
-            MessageBox.Show("Please fill in all fields before adding.")
-            Return
+        If btnadd.Text = "Add" Then
+            lstboxMG.Enabled = False
+            btnupdate.Enabled = False
+            btndelete.Enabled = False
+            grpG1.Enabled = True
+            ClearFields()
+            btnadd.Text = "Save"
+        ElseIf btnadd.Text = "Save" Then
+
+            ' Ensure all fields are filled
+            If txtQuestion.Text = "" Or txtCorrectAnswer.Text = "" Or txtRandomAnswers.Text = "" Then
+                MessageBox.Show("Please fill in all fields before adding.")
+                Return
+            End If
+
+            ' Check if the question already exists
+            Dim queryCheck As String = "SELECT COUNT(*) FROM DBMG1 WHERE [questions] = @questions"
+            Dim cmdCheck As New OleDbCommand(queryCheck, conn)
+            cmdCheck.Parameters.AddWithValue("@questions", txtQuestion.Text)
+
+            conn.Open()
+            Dim count As Integer = Convert.ToInt32(cmdCheck.ExecuteScalar())
+            conn.Close()
+
+            If count > 0 Then
+                MessageBox.Show("This question already exists in the database.")
+                Return
+            End If
+
+            ' Insert the new question
+            Dim query As String = "INSERT INTO DBMG1 ([questions], [correctAns], [randAns]) VALUES (@questions, @correctAns, @randAns)"
+            Dim cmd As New OleDbCommand(query, conn)
+
+            cmd.Parameters.AddWithValue("@questions", txtQuestion.Text)
+            cmd.Parameters.AddWithValue("@correctAns", txtCorrectAnswer.Text)
+            cmd.Parameters.AddWithValue("@randAns", txtRandomAnswers.Text)
+
+            conn.Open()
+            cmd.ExecuteNonQuery()
+            conn.Close()
+
+            LoadQuestions()
+
+            MessageBox.Show("Question added successfully!")
+            ClearFields()
+            btnadd.Enabled = True
+            btnupdate.Enabled = True
+            btndelete.Enabled = True
+            stateControl(True, False)
         End If
-
-        ' Check if the question already exists
-        Dim queryCheck As String = "SELECT COUNT(*) FROM DBMG1 WHERE [questions] = @questions"
-        Dim cmdCheck As New OleDbCommand(queryCheck, conn)
-        cmdCheck.Parameters.AddWithValue("@questions", txtQuestion.Text)
-
-        conn.Open()
-        Dim count As Integer = Convert.ToInt32(cmdCheck.ExecuteScalar())
-        conn.Close()
-
-        If count > 0 Then
-            MessageBox.Show("This question already exists in the database.")
-            Return
-        End If
-
-        ' Insert the new question
-        Dim query As String = "INSERT INTO DBMG1 ([questions], [correctAns], [randAns]) VALUES (@questions, @correctAns, @randAns)"
-        Dim cmd As New OleDbCommand(query, conn)
-
-        cmd.Parameters.AddWithValue("@questions", txtQuestion.Text)
-        cmd.Parameters.AddWithValue("@correctAns", txtCorrectAnswer.Text)
-        cmd.Parameters.AddWithValue("@randAns", txtRandomAnswers.Text)
-
-        conn.Open()
-        cmd.ExecuteNonQuery()
-        conn.Close()
-
-        LoadQuestions()
-        ClearFields()
-        MessageBox.Show("Question added successfully!")
     End Sub
 
 
     ' Update selected question
     Private Sub btnUpdate_Click(sender As Object, e As EventArgs) Handles btnupdate.Click
-        If Not btnupdate.Enabled Then Return
+        If txtCorrectAnswer.Text = "" Or txtQuestion.Text = "" Or txtRandomAnswers.Text = "" Then
+            MessageBox.Show("Please select a note to update.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+            Return
+        End If
+        If btnupdate.Text = "Update" Then
+            lstboxMG.Enabled = False
+            btnadd.Enabled = False
+            btndelete.Enabled = False
+            grpG1.Enabled = True
+            btnupdate.Text = "Save"
+        ElseIf btnupdate.Text = "Save" Then
+            If Not btnupdate.Enabled Then Return
 
-        Dim query As String = "UPDATE DBMG1 SET [questions] = @questions, [correctAns] = @correctAns, [randAns] = @randAns WHERE [Numbers] = @Numbers"
-        Dim cmd As New OleDbCommand(query, conn)
+            Dim query As String = "UPDATE DBMG1 SET [questions] = @questions, [correctAns] = @correctAns, [randAns] = @randAns WHERE [Numbers] = @Numbers"
+            Dim cmd As New OleDbCommand(query, conn)
 
-        cmd.Parameters.AddWithValue("@questions", txtQuestion.Text)
-        cmd.Parameters.AddWithValue("@correctAns", txtCorrectAnswer.Text)
-        cmd.Parameters.AddWithValue("@randAns", txtRandomAnswers.Text)
-        cmd.Parameters.AddWithValue("@Numbers", selectedID)
+            cmd.Parameters.AddWithValue("@questions", txtQuestion.Text)
+            cmd.Parameters.AddWithValue("@correctAns", txtCorrectAnswer.Text)
+            cmd.Parameters.AddWithValue("@randAns", txtRandomAnswers.Text)
+            cmd.Parameters.AddWithValue("@Numbers", selectedID)
 
-        conn.Open()
-        cmd.ExecuteNonQuery()
-        conn.Close()
+            conn.Open()
+            cmd.ExecuteNonQuery()
+            conn.Close()
 
-        LoadQuestions()
-        ClearFields()
-        MessageBox.Show("Question updated successfully!")
+            LoadQuestions()
+            'ClearFields()
+            MessageBox.Show("Question updated successfully!")
+            btnadd.Enabled = True
+            btndelete.Enabled = True
+            stateControl(True, False)
+        End If
     End Sub
 
     ' Delete selected question
     Private Sub btnDelete_Click(sender As Object, e As EventArgs) Handles btndelete.Click
-        If Not btndelete.Enabled Then Return
+        If txtCorrectAnswer.Text = "" Or txtQuestion.Text = "" Then
+            MessageBox.Show("Please select a Question to delete.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+            Return
+        End If
 
-        Dim query As String = "DELETE FROM DBMG1 WHERE [Numbers] = @Numbers"
-        Dim cmd As New OleDbCommand(query, conn)
-        cmd.Parameters.AddWithValue("@Numbers", selectedID)
+        grpG1.Enabled = False
+        btnadd.Enabled = False
+        btnupdate.Enabled = False
+        If MessageBox.Show("Do you want to delete this?", "delete Note", MessageBoxButtons.YesNo) = DialogResult.Yes Then
+            If Not btndelete.Enabled Then Return
 
-        conn.Open()
-        cmd.ExecuteNonQuery()
-        conn.Close()
+            Dim query As String = "DELETE FROM DBMG1 WHERE [Numbers] = @Numbers"
+            Dim cmd As New OleDbCommand(query, conn)
+            cmd.Parameters.AddWithValue("@Numbers", selectedID)
 
-        LoadQuestions()
+            conn.Open()
+            cmd.ExecuteNonQuery()
+            conn.Close()
+
+            LoadQuestions()
+
+            MessageBox.Show("Question deleted successfully!")
+            ClearFields()
+            btnupdate.Enabled = True
+            btnadd.Enabled = True
+            stateControl(True, False)
+        End If
         ClearFields()
-        MessageBox.Show("Question deleted successfully!")
+        btnupdate.Enabled = True
+        btnadd.Enabled = True
+        stateControl(True, False)
+    End Sub
+
+    Private Sub ClearText()
+        txtQuestion.Clear()
+        txtCorrectAnswer.Clear()
+        txtRandomAnswers.Clear()
     End Sub
 
     ' Clear input fields and reset selected ID
@@ -143,11 +208,15 @@ Public Class Game1crud
         txtCorrectAnswer.Text = ""
         txtRandomAnswers.Text = ""
         selectedID = 0
-        ValidateInputs()
+        'ValidateInputs()
     End Sub
 
     ' Close form
     Private Sub btnCancel_Click(sender As Object, e As EventArgs) Handles btncancel.Click
+        btnupdate.Enabled = True
+        btndelete.Enabled = True
+        btnadd.Enabled = True
+        stateControl(True, False)
         ClearFields()
     End Sub
 

@@ -2,7 +2,7 @@
 
 Module Module2
     ' Connection string to the Access database
-    Public connectionString As String = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Kiana\Documents\AlgoMasters_Project\Database2.accdb"
+    Public connectionString As String = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=\\192.168.100.3\TableTutorDB\Database2.accdb;"
 
     ' Retrieves patient details and lab results based on ID
     Public Function GetPatientData() As DataTable

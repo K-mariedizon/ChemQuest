@@ -3,12 +3,6 @@
 Public Class dashboard
     Private Sub dashboard_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'Me.Text = "Welcome" & Form1.Name
-
-        If Login.level = 1 Then
-            btnA.Enabled = False
-        ElseIf Login.level = 2 Then
-            btnS.Enabled = False
-        End If
     End Sub
 
     Private Sub dashboard_Closed(sender As Object, e As EventArgs) Handles Me.Closed
@@ -17,14 +11,13 @@ Public Class dashboard
     End Sub
 
     Private Sub btnS_Click(sender As Object, e As EventArgs) Handles btnS.Click
-        If Login.level = 1 Then
-            Dim mainmenuForm As New btnPass
-            mainmenuForm.Show()
-            Me.Hide()
-        ElseIf Login.level = 2 Then
+        Dim mainmenuForm As New btnPass
+        mainmenuForm.Show()
 
+    End Sub
 
-        End If
-
+    Private Sub btnA_Click(sender As Object, e As EventArgs) Handles btnA.Click
+        Dim admin As New Admin
+        admin.Show()
     End Sub
 End Class

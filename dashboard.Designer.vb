@@ -36,7 +36,7 @@ Partial Class dashboard
         btnS.Name = "btnS"
         btnS.Size = New Size(254, 67)
         btnS.TabIndex = 0
-        btnS.Text = "Student"
+        btnS.Text = "Owner "
         btnS.UseVisualStyleBackColor = False
         ' 
         ' btnA
@@ -48,7 +48,7 @@ Partial Class dashboard
         btnA.Name = "btnA"
         btnA.Size = New Size(254, 67)
         btnA.TabIndex = 1
-        btnA.Text = "Admin"
+        btnA.Text = "Manage Guest"
         btnA.UseVisualStyleBackColor = False
         ' 
         ' dashboard
